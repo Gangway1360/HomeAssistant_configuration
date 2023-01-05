@@ -1,0 +1,25 @@
+- id: '1672391329611'
+  alias: Démarrer aspirateur par zone
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: vacuum.stop
+    target:
+      entity_id: vacuum.victor
+    data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: script.turn_on
+    data:
+      entity_id: "{% if is_states ('input_select.aspirateur_pieces','Bureau') %}\n
+        \ script.s_aspirateur_bureau\n{% elif is_states ('input_select.aspirateur_pieces','Chambre')
+        %}\n  script.s_aspirateur_chambre\n{% elif is_states ('input_select.aspirateur_pieces','Dressing')
+        %}\n  script.s_aspirateur_dressing\n{% elif is_states ('input_select.aspirateur_pieces','Salle
+        de bain') %}\n  script.s_aspirateur_salledebain\n{% elif states.input_select.aspirateur_pieces
+        == \"Salon/Cuisine\" %}\n  script.s_aspirateur_salon_cuisine\n{% elif states.input_select.aspirateur_pieces
+        == \"Toilette\" %}\n  script.s_aspirateur_toilette\n{% endif %}\n"
+  mode: single

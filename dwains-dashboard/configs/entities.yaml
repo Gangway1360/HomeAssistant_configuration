@@ -1,0 +1,24 @@
+binary_sensor.archer_mr600_wan_status:
+  sort_order: 1
+binary_sensor.super21_is_charging:
+  sort_order: 2
+device_tracker.super21:
+  sort_order: 3
+sensor.archer_mr600_external_ip:
+  sort_order: 4
+sensor.archer_mr600_kib_s_received:
+  sort_order: 5
+sensor.archer_mr600_kib_s_sent:
+  sort_order: 6
+sensor.super21_battery_level:
+  sort_order: 7
+sensor.super21_battery_state:
+  sort_order: 8
+sensor.super21_charger_type:
+  sort_order: 9
+sensor.super21_battery_health:
+  sort_order: 10
+sensor.super21_battery_temperature:
+  sort_order: 11
+sensor.super21_battery_power:
+  sort_order: 12

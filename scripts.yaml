@@ -1,0 +1,120 @@
+s_aspirateur_dressing:
+  alias: 'S_Aspirateur: Dressing'
+  sequence:
+  - service: xiaomi_miio.vacuum_clean_zone
+    target:
+      entity_id: vacuum.victor
+    data:
+      repeats: 1
+      zone:
+      - - 24768
+        - 28627
+        - 28005
+        - 31905
+  mode: single
+  icon: mdi:robot-vacuum
+s_aspirateur_bureau:
+  alias: 'S_Aspirateur: Bureau'
+  sequence:
+  - service: xiaomi_miio.vacuum_clean_zone
+    target:
+      entity_id: vacuum.victor
+    data:
+      repeats: 1
+      zone:
+      - - 24750
+        - 24975
+        - 27966
+        - 28671
+  mode: single
+  icon: mdi:robot-vacuum
+s_aspirateur_toilette:
+  alias: 'S_Aspirateur: Toilette'
+  sequence:
+  - service: xiaomi_miio.vacuum_clean_zone
+    target:
+      entity_id: vacuum.victor
+    data:
+      repeats: 1
+      zone:
+      - - 27841
+        - 25059
+        - 28997
+        - 27643
+  mode: single
+  icon: mdi:robot-vacuum
+s_aspirateur_salledebain:
+  alias: 'S_Aspirateur: SalleDeBain'
+  sequence:
+  - service: xiaomi_miio.vacuum_clean_zone
+    target:
+      entity_id: vacuum.victor
+    data:
+      repeats: 1
+      zone:
+      - - 29080
+        - 25059
+        - 32763
+        - 27643
+  mode: single
+  icon: mdi:robot-vacuum
+s_aspirateur_chambre:
+  alias: 'S_Aspirateur: Chambre'
+  sequence:
+  - service: xiaomi_miio.vacuum_clean_zone
+    target:
+      entity_id: vacuum.victor
+    data:
+      repeats: 1
+      zone:
+      - - 32746
+        - 25110
+        - 36825
+        - 28882
+  mode: single
+  icon: mdi:robot-vacuum
+s_aspirateur_salon_cuisine:
+  alias: 'S_Aspirateur: Salon_Cuisine'
+  sequence:
+  - service: xiaomi_miio.vacuum_clean_zone
+    target:
+      entity_id: vacuum.victor
+    data:
+      repeats: 1
+      zone:
+      - - 29526
+        - 28827
+        - 36825
+        - 33689
+  mode: single
+  icon: mdi:robot-vacuum
+s_aspirateur_litiere:
+  alias: 'S_Aspirateur: Litière'
+  sequence:
+  - service: xiaomi_miio.vacuum_clean_zone
+    target:
+      entity_id: vacuum.victor
+    data:
+      repeats: 1
+      zone:
+      - - 31854
+        - 31598
+        - 35190
+        - 33738
+  mode: single
+  icon: mdi:robot-vacuum
+s_aspirateur_tapis:
+  alias: 'S_Aspirateur: Tapis'
+  sequence:
+  - service: xiaomi_miio.vacuum_clean_zone
+    target:
+      entity_id: vacuum.victor
+    data:
+      repeats: 1
+      zone:
+      - - 33182
+        - 28894
+        - 36045
+        - 31122
+  mode: single
+  icon: mdi:robot-vacuum
