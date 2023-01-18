@@ -51,6 +51,7 @@ ip_bans.yaml
 home-assistant.db
 home-assistant_v2.db
 home-assistant_v2.db-*
+home-assistant.log.*
 zigbee2mqtt/configuration.yaml
 
 #os

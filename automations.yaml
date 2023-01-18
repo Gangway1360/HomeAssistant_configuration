@@ -23,3 +23,30 @@
         == \"Salon/Cuisine\" %}\n  script.s_aspirateur_salon_cuisine\n{% elif states.input_select.aspirateur_pieces
         == \"Toilette\" %}\n  script.s_aspirateur_toilette\n{% endif %}\n"
   mode: single
+- id: '1674036635482'
+  alias: test mouvement + condition lux
+  description: si mouvement et moins de 50 lux => notif super21
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+    entity_id: binary_sensor.0x54ef4410005a8dc9_occupancy
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+    entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
+    domain: sensor
+    below: 50
+  action:
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    message: ça marche !
+    title: test mouvement + lux
+  mode: single
