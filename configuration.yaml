@@ -90,6 +90,7 @@ template:
       unique_id: Speedtest_location
       state: '{{ ((states("sensor.speedtest_cli_data") | from_json).location) }}'
 
+#Aspirateur Roborock
 camera:
   - platform: xiaomi_cloud_map_extractor
     host: !secret xiaomi_vacuum_ip

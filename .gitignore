@@ -41,6 +41,7 @@ __pycache__
 .storage
 deps
 custom_components/hacs
+zigbee2mqtt/log
 
 #fichiers
 secrets.yaml
@@ -50,6 +51,7 @@ ip_bans.yaml
 home-assistant.db
 home-assistant_v2.db
 home-assistant_v2.db-*
+zigbee2mqtt/configuration.yaml
 
 #os
 .DS_Store
