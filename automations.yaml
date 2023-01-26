@@ -24,7 +24,7 @@
         == \"Toilette\" %}\n  script.s_aspirateur_toilette\n{% endif %}\n"
   mode: single
 - id: '1674036635482'
-  alias: Salon_mouvement-lux_light_ON
+  alias: Salon_moi-mouvement-lux_light_ON
   description: si mouvement + lux => allume salon
   trigger:
   - type: motion
@@ -35,24 +35,22 @@
     for:
       hours: 0
       minutes: 0
-      seconds: 0
+      seconds: 3
   condition:
-  - type: is_illuminance
-    condition: device
-    device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
-    entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
-    domain: sensor
-    below: 60
-  - condition: device
-    type: is_off
-    device_id: 687dad33e6d70811a28a821055adccd4
-    entity_id: light.yeelight_color_entree
-    domain: light
-  - condition: device
-    type: is_off
-    device_id: 56937e4fc50a2019406b0874255917cd
-    entity_id: light.yeelight_color_lampadaire
-    domain: light
+  - condition: and
+    conditions:
+    - condition: device
+      device_id: 2b61395c28cf69b6694f9a88c35a9df6
+      domain: device_tracker
+      entity_id: device_tracker.super21
+      type: is_home
+      enabled: false
+    - type: is_illuminance
+      condition: device
+      device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+      entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
+      domain: sensor
+      below: 60
   action:
   - type: turn_on
     device_id: 687dad33e6d70811a28a821055adccd4
@@ -64,9 +62,14 @@
     entity_id: light.yeelight_color_lampadaire
     domain: light
     brightness_pct: 100
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    message: Lumières ON. Du mouvement
+    title: Automatisation
   mode: single
 - id: '1674056461573'
-  alias: Salon_NoMouvement-2min_lights_OFF
+  alias: Salon_NoMouvement-3min_lights_OFF
   description: ''
   trigger:
   - type: no_motion
@@ -76,14 +79,36 @@
     domain: binary_sensor
     for:
       hours: 0
-      minutes: 2
+      minutes: 3
       seconds: 0
   condition:
-  - condition: device
-    device_id: ab5eb56734a3754889bd3a0f23ff6f07
-    domain: media_player
-    entity_id: media_player.lg_webos_tv_214e
-    type: is_idle
+  - condition: or
+    conditions:
+    - condition: device
+      device_id: 1ef132b28f63368f6b81c3e09867065a
+      domain: media_player
+      entity_id: media_player.tele
+      type: is_idle
+    - condition: device
+      device_id: 1ef132b28f63368f6b81c3e09867065a
+      domain: media_player
+      entity_id: media_player.tele
+      type: is_off
+  - condition: and
+    conditions:
+    - condition: or
+      conditions:
+      - condition: device
+        type: is_on
+        device_id: 687dad33e6d70811a28a821055adccd4
+        entity_id: light.yeelight_color_entree
+        domain: light
+      - condition: device
+        type: is_on
+        device_id: 56937e4fc50a2019406b0874255917cd
+        entity_id: light.yeelight_color_lampadaire
+        domain: light
+    enabled: false
   action:
   - type: turn_off
     device_id: 687dad33e6d70811a28a821055adccd4
@@ -93,6 +118,11 @@
     device_id: 56937e4fc50a2019406b0874255917cd
     entity_id: light.yeelight_color_lampadaire
     domain: light
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    message: Plus de mouvements. Lumières Off
+    title: Automatisations
   mode: single
 - id: '1674057301650'
   alias: Salon_lux_light_Off
@@ -103,8 +133,20 @@
     device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
     entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
     domain: sensor
-    above: 60
-  condition: []
+    above: 70
+  condition:
+  - condition: or
+    conditions:
+    - condition: device
+      type: is_on
+      device_id: 687dad33e6d70811a28a821055adccd4
+      entity_id: light.yeelight_color_entree
+      domain: light
+    - condition: device
+      type: is_on
+      device_id: 56937e4fc50a2019406b0874255917cd
+      entity_id: light.yeelight_color_lampadaire
+      domain: light
   action:
   - type: turn_off
     device_id: 687dad33e6d70811a28a821055adccd4
@@ -114,43 +156,40 @@
     device_id: 56937e4fc50a2019406b0874255917cd
     entity_id: light.yeelight_color_lampadaire
     domain: light
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    title: Automatisation
+    message: Lumières Off. Assez lumineux
   mode: single
 - id: '1674058676939'
-  alias: Salon_TV-lux_Amibilight_ON
+  alias: Salon_TV-entree_OFF
   description: ''
   trigger:
   - platform: device
-    device_id: ab5eb56734a3754889bd3a0f23ff6f07
-    domain: media_player
-    entity_id: media_player.lg_webos_tv_214e
     type: turned_on
+    device_id: dbfcac9e2516dd6484ff2261d038bcd2
+    entity_id: switch.hyperhdr_component_led_device
+    domain: switch
+    enabled: false
+  - platform: device
+    device_id: cccadbb1f56557877997f87d8d3b291c
+    domain: media_player
+    entity_id: media_player.android_tv_192_168_1_115
+    type: playing
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 3
   condition:
-  - type: is_illuminance
-    condition: device
-    device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
-    entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
-    domain: sensor
-    below: 60
-  action:
-  - type: turn_off
+  - condition: device
+    type: is_on
     device_id: 687dad33e6d70811a28a821055adccd4
     entity_id: light.yeelight_color_entree
     domain: light
-  - type: turn_on
-    device_id: dbfcac9e2516dd6484ff2261d038bcd2
-    entity_id: light.hyperhdr
-    domain: light
-    brightness_pct: 100
-  mode: single
-- id: '1674070315654'
-  alias: Salon_Nfc_light-entrée_ON/OFF
-  description: ''
-  trigger:
-  - platform: tag
-    tag_id: 8dabc0dc-0b59-4a51-abaa-23c2453b3781
-  condition: []
+    enabled: true
   action:
-  - type: toggle
+  - type: turn_off
     device_id: 687dad33e6d70811a28a821055adccd4
     entity_id: light.yeelight_color_entree
     domain: light
@@ -171,6 +210,7 @@
     entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
     domain: sensor
     above: 60
+    enabled: true
   action:
   - type: turn_off
     device_id: dbfcac9e2516dd6484ff2261d038bcd2
@@ -195,4 +235,129 @@
     entity_id: select.0x54ef4410005a8dc9_motion_sensitivity
     type: select_option
     option: low
+  mode: single
+- id: '1674132477823'
+  alias: Github_Push configuration-23h23min23
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:23:23'
+  condition: []
+  action:
+  - service: hassio.addon_stdin
+    data:
+      addon: a0d7b954_ssh
+      input: /config/ha_gitpush.sh
+  mode: single
+- id: '1674471967437'
+  alias: NFC cuisine
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: a7ad5671-2dc8-45d8-9707-226761c71bf1
+  condition: []
+  action:
+  - type: toggle
+    device_id: 17e652354e48f1c79fc876cec389ecf3
+    entity_id: light.cuisine_1
+    domain: light
+  - type: toggle
+    device_id: 92b6b011eea2ca2d6b0e1f032cb6b897
+    entity_id: light.cuisine_2
+    domain: light
+  mode: single
+- id: '1674478584185'
+  alias: NFC entrée
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 8dabc0dc-0b59-4a51-abaa-23c2453b3781
+  condition: []
+  action:
+  - type: toggle
+    device_id: 687dad33e6d70811a28a821055adccd4
+    entity_id: light.yeelight_color_entree
+    domain: light
+  mode: single
+- id: '1674478617865'
+  alias: NFC entrée lampadaire
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: ca1a3ca8-e134-467f-a133-453d5cedf80b
+  condition: []
+  action:
+  - type: toggle
+    device_id: 687dad33e6d70811a28a821055adccd4
+    entity_id: light.yeelight_color_entree
+    domain: light
+  - type: toggle
+    device_id: 56937e4fc50a2019406b0874255917cd
+    entity_id: light.yeelight_color_lampadaire
+    domain: light
+  mode: single
+- id: '1674491056262'
+  alias: Salon_TvPause_entree_ON
+  description: ''
+  trigger:
+  - platform: device
+    device_id: cccadbb1f56557877997f87d8d3b291c
+    domain: media_player
+    entity_id: media_player.android_tv_192_168_1_115
+    type: paused
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 20
+    enabled: false
+  - platform: device
+    device_id: cccadbb1f56557877997f87d8d3b291c
+    domain: media_player
+    entity_id: media_player.android_tv_192_168_1_115
+    type: turned_off
+    enabled: true
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 56937e4fc50a2019406b0874255917cd
+    entity_id: light.yeelight_color_lampadaire
+    domain: light
+  action:
+  - type: turn_on
+    device_id: 687dad33e6d70811a28a821055adccd4
+    entity_id: light.yeelight_color_entree
+    domain: light
+  mode: single
+- id: '1674649451948'
+  alias: Salon_matin_premier
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+    entity_id: binary_sensor.0x54ef4410005a8dc9_occupancy
+    domain: binary_sensor
+  condition:
+  - condition: and
+    conditions:
+    - condition: time
+      after: 06:00:00
+    - type: is_illuminance
+      condition: device
+      device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+      entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
+      domain: sensor
+      below: 60
+    - condition: numeric_state
+      entity_id: counter.detection_mouvement
+      below: 1
+    enabled: true
+  action:
+  - service: script.compteur_mouvement
+    data: {}
+    enabled: true
+  - type: turn_on
+    device_id: 687dad33e6d70811a28a821055adccd4
+    entity_id: light.yeelight_color_entree
+    domain: light
   mode: single

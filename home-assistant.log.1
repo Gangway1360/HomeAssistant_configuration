@@ -1,68 +1,390 @@
-2023-01-19 09:34:49.900 WARNING (SyncWorker_2) [homeassistant.loader] We found a custom integration dwains_dashboard which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:34:49.911 WARNING (SyncWorker_2) [homeassistant.loader] We found a custom integration xiaomi_cloud_map_extractor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:34:49.919 WARNING (SyncWorker_2) [homeassistant.loader] We found a custom integration ui_lovelace_minimalist which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:34:49.927 WARNING (SyncWorker_2) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:34:49.935 WARNING (SyncWorker_2) [homeassistant.loader] We found a custom integration rte_ecowatt which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:35:37.553 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform command_line is taking over 10 seconds.
-2023-01-19 09:35:37.620 WARNING (MainThread) [homeassistant.setup] Setup of input_datetime is taking over 10 seconds.
-2023-01-19 09:35:37.626 WARNING (MainThread) [homeassistant.setup] Setup of input_select is taking over 10 seconds.
-2023-01-19 09:35:37.632 WARNING (MainThread) [homeassistant.setup] Setup of input_text is taking over 10 seconds.
-2023-01-19 09:35:37.638 WARNING (MainThread) [homeassistant.setup] Setup of input_number is taking over 10 seconds.
-2023-01-19 09:35:37.645 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
-2023-01-19 09:35:37.651 WARNING (MainThread) [homeassistant.setup] Setup of input_button is taking over 10 seconds.
-2023-01-19 09:35:37.657 WARNING (MainThread) [homeassistant.setup] Setup of schedule is taking over 10 seconds.
-2023-01-19 09:35:37.664 WARNING (MainThread) [homeassistant.setup] Setup of zone is taking over 10 seconds.
-2023-01-19 09:36:02.927 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of binary_sensor platform xiaomi_miio is taking over 10 seconds.
-2023-01-19 09:36:02.934 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform xiaomi_miio is taking over 10 seconds.
-2023-01-19 09:36:02.942 WARNING (MainThread) [homeassistant.components.camera] Setup of camera platform xiaomi_cloud_map_extractor is taking over 10 seconds.
-2023-01-19 09:36:02.948 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of binary_sensor platform rpi_power is taking over 10 seconds.
-2023-01-19 09:36:02.954 WARNING (MainThread) [homeassistant.components.vacuum] Setup of vacuum platform xiaomi_miio is taking over 10 seconds.
-2023-01-19 09:36:02.984 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-01-19 09:36:07.917 WARNING (MainThread) [homeassistant.config_entries] Config entry 'LG webOS TV 214E' for homekit_controller integration not ready yet: Timeout while waiting for connection to device 192.168.1.113:34734; Retrying in background
-2023-01-19 09:36:09.010 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
-2023-01-19 09:36:09.290 ERROR (MainThread) [homeassistant.components.sensor] Platform rte_ecowatt does not generate unique IDs. ID ecowatt-level-in-0-hours already exists - ignoring sensor.ecowatt_level_now
-2023-01-19 09:36:19.058 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform rte_ecowatt is taking over 10 seconds.
-2023-01-19 09:36:20.756 ERROR (MainThread) [homeassistant.components.sensor] Error while setting up rte_ecowatt platform for sensor
+2023-01-23 13:38:07.499 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration dwains_dashboard which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-01-23 13:38:07.510 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration xiaomi_cloud_map_extractor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-01-23 13:38:07.520 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hyperhdr which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-01-23 13:38:07.528 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration ui_lovelace_minimalist which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-01-23 13:38:07.536 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-01-23 13:38:07.545 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration rte_ecowatt which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-01-23 13:38:46.450 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 13:38:46.785 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform command_line is taking over 10 seconds.
+2023-01-23 13:39:00.970 ERROR (MainThread) [homeassistant.components.sensor] Platform rte_ecowatt does not generate unique IDs. ID ecowatt-level-in-0-hours already exists - ignoring sensor.ecowatt_level_now
+2023-01-23 13:39:27.551 WARNING (MainThread) [homeassistant.setup] Setup of script is taking over 10 seconds.
+2023-01-23 13:39:27.558 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform rte_ecowatt is taking over 10 seconds.
+2023-01-23 13:39:30.787 WARNING (MainThread) [homeassistant.config_entries] Config entry 'LG webOS TV 214E' for homekit_controller integration not ready yet: Timeout while waiting for connection to device 192.168.1.113:38897; Retrying in background
+2023-01-23 13:39:31.007 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.115:5555.  TcpTimeoutException: Connecting to 192.168.1.115:5555 timed out (1.0 seconds)
+2023-01-23 13:39:31.074 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Chromecast TV' for androidtv integration not ready yet: Could not connect to Android TV device at 192.168.1.115:5555 using Python ADB implementation with adbkey='/config/.storage/androidtv_adbkey'; Retrying in background
+2023-01-23 13:39:38.209 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 13:39:44.149 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 13:39:58.827 ERROR (MainThread) [homeassistant.components.bluetooth.scanner] hci0 (B8:27:EB:D5:3A:F9): Error stopping scanner: [org.bluez.Error.InProgress] Operation already in progress
+2023-01-23 13:40:18.322 WARNING (MainThread) [bluetooth_auto_recovery.recover] Checking rfkill for hci0 timed out after 3 seconds!
+2023-01-23 13:40:18.368 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 13:40:23.553 WARNING (MainThread) [bluetooth_auto_recovery.recover] Bluetooth adapter hci0 [B8:27:EB:D5:3A:F9] could not be reset due to timeout
+2023-01-23 13:41:58.799 ERROR (MainThread) [homeassistant.components.bluetooth.scanner] hci0 (B8:27:EB:D5:3A:F9): Error stopping scanner: [org.bluez.Error.NotReady] Resource Not Ready
+2023-01-23 13:42:01.198 WARNING (MainThread) [bluetooth_auto_recovery.recover] Bluetooth adapter hci0 [B8:27:EB:D5:3A:F9] successfully turned back ON
+2023-01-23 13:42:28.708 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 13:44:38.394 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 13:44:53.398 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 13:44:58.399 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 13:44:58.406 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 13:44:58.517 WARNING (SyncWorker_9) [custom_components.xiaomi_cloud_map_extractor.camera] Got exception while fetching the state: Unable to discover the device 192.168.1.101
+2023-01-23 13:45:03.401 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 13:45:04.426 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 13:45:08.402 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 13:45:28.742 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 13:46:03.413 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 13:47:58.767 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 13:49:28.780 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 13:52:58.778 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 13:56:28.787 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 13:57:58.789 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 14:01:38.656 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:01:58.801 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 14:06:24.670 ERROR (MainThread) [aiohttp.server] Error handling request
 Traceback (most recent call last):
-  File "/config/custom_components/rte_ecowatt/__init__.py", line 187, in update_method
-    raise UpdateFailed(
-homeassistant.helpers.update_coordinator.UpdateFailed: Error communicating with RTE API: requests too frequent to RTE API
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 225, in _async_refresh
-    self.data = await self._async_update_data()
-  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 181, in _async_update_data
-    return await self.update_method()
-  File "/config/custom_components/rte_ecowatt/__init__.py", line 206, in update_method
-    raise UpdateFailed(f"Error communicating with API: {err}")
-homeassistant.helpers.update_coordinator.UpdateFailed: Error communicating with API: Error communicating with RTE API: requests too frequent to RTE API
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 289, in _async_setup_platform
-    await asyncio.shield(task)
-  File "/config/custom_components/rte_ecowatt/sensor.py", line 98, in async_setup_entry
-    await rte_coordinator.async_config_entry_first_refresh()
-  File "/usr/src/homeassistant/homeassistant/helpers/update_coordinator.py", line 197, in async_config_entry_first_refresh
-    raise ex
-homeassistant.exceptions.ConfigEntryNotReady: Error communicating with API: Error communicating with RTE API: requests too frequent to RTE API
-2023-01-19 09:36:28.546 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
-2023-01-19 09:37:03.383 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
-2023-01-19 09:37:03.469 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
-2023-01-19 09:37:18.302 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
-2023-01-19 09:39:38.357 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
-2023-01-19 09:40:07.981 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-01-19 09:41:30.729 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration dwains_dashboard which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:41:30.854 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration xiaomi_cloud_map_extractor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:41:30.909 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hyperhdr which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:41:30.997 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration ui_lovelace_minimalist which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:41:31.084 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:41:31.169 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration rte_ecowatt which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-01-19 09:41:55.302 ERROR (MainThread) [homeassistant.components.hassio.handler] Client error on /homeassistant/restart request Server disconnected
-2023-01-19 09:41:55.426 WARNING (Thread-7 (_do_shutdown)) [homeassistant.util.executor] Thread[SyncWorker_9] is still running at shutdown: File "/usr/local/lib/python3.10/threading.py", line 973, in _bootstrap
+  File "/usr/local/lib/python3.10/site-packages/aiohttp/web_protocol.py", line 334, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp/_http_parser.pyx", line 551, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message='Pause on PRI/Upgrade'
+2023-01-23 14:10:58.831 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 14:14:58.843 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 14:17:58.913 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:18:28.850 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 14:19:03.926 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:34:19.176 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:34:49.387 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:38:16.580 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:17.139 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:17.247 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:17.354 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:17.459 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:17.579 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:17.672 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:17.787 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:17.890 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.011 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.109 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.190 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.210 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.219 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.230 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.241 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.253 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.264 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.273 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.282 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.292 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.301 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.311 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.322 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.332 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.343 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.352 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.362 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.372 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.381 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.391 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.400 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.410 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:18.419 WARNING (MainThread) [asyncio] socket.send() raised exception.
+2023-01-23 14:38:38.790 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /info request
+2023-01-23 14:38:38.804 WARNING (MainThread) [homeassistant.components.hassio] Can't read Supervisor data: 
+2023-01-23 14:38:59.544 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:39:03.237 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
+2023-01-23 14:39:09.575 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:40:29.597 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:40:39.625 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:40:59.796 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:42:09.799 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:53:41.370 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 14:56:07.609 ERROR (SyncWorker_9) [homeassistant] Error doing job: Task was destroyed but it is pending!
+2023-01-23 14:56:07.692 ERROR (SyncWorker_9) [homeassistant] Error doing job: Task was destroyed but it is pending!
+2023-01-23 14:58:29.486 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:00:12.689 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:00:17.690 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:00:17.698 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:00:17.806 WARNING (SyncWorker_0) [custom_components.xiaomi_cloud_map_extractor.camera] Got exception while fetching the state: Unable to discover the device 192.168.1.101
+2023-01-23 15:00:22.691 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:00:24.424 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 15:00:27.693 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:00:32.693 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:00:37.696 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:00:42.697 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:00:47.698 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:00:52.700 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:00:57.702 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:02.703 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:05.517 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Yeelight entree' for yeelight integration not ready yet: Failed to read from the socket at 192.168.1.111:55443: [Errno 113] Connect call failed ('192.168.1.111', 55443).; Retrying in background
+2023-01-23 15:01:11.277 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Color 0x12c713b3' for yeelight integration not ready yet: Failed to read from the socket at 192.168.1.106:55443: [Errno 113] Connect call failed ('192.168.1.106', 55443).; Retrying in background
+2023-01-23 15:01:12.707 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:17.708 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:17.715 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:01:22.710 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:27.711 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:29.502 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:01:32.712 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:37.713 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:42.714 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:47.715 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:52.716 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:01:57.718 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:07.720 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:12.721 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:12.727 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:02:17.723 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:22.725 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:27.726 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:32.727 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:37.729 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:42.730 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:47.731 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:02:52.732 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:02.735 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:07.737 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:07.744 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:03:12.738 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:17.740 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:22.742 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:27.743 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:29.508 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:03:32.746 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:37.747 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:42.748 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:47.749 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:03:57.753 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:04:02.755 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:04:02.761 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:04:07.757 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:04:29.559 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:05:12.775 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:08:37.827 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:08:42.830 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:08:42.835 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:08:42.945 WARNING (SyncWorker_9) [custom_components.xiaomi_cloud_map_extractor.camera] Got exception while fetching the state: Unable to discover the device 192.168.1.101
+2023-01-23 15:09:57.850 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:09:59.582 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:10:02.851 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:10:02.857 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:10:02.965 WARNING (SyncWorker_9) [custom_components.xiaomi_cloud_map_extractor.camera] Got exception while fetching the state: Unable to discover the device 192.168.1.101
+2023-01-23 15:10:07.852 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:11:59.664 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:15:59.709 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:19:29.749 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:20:29.765 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:22:08.070 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:27:59.863 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:29:03.198 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:29:08.199 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:29:08.207 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:29:08.316 WARNING (SyncWorker_1) [custom_components.xiaomi_cloud_map_extractor.camera] Got exception while fetching the state: Unable to discover the device 192.168.1.101
+2023-01-23 15:29:13.200 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:29:23.202 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:29:29.871 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:29:43.208 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:29:51.426 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 15:29:58.211 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:30:29.886 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:30:46.425 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 15:31:29.887 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:32:23.259 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:32:59.912 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:34:59.937 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:35:23.308 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:35:28.310 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:35:28.315 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:36:29.963 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:36:58.335 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:37:03.336 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:37:03.342 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 15:37:29.972 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:38:58.382 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:38:59.956 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:39:03.241 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
+2023-01-23 15:40:30.029 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:42:53.456 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:44:30.077 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:45:30.070 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:47:30.105 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:48:18.543 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:49:00.135 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:49:43.567 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:50:30.155 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:51:30.164 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:52:30.189 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:54:00.200 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:54:28.649 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 15:55:00.205 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 15:59:30.273 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:01:08.758 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:02:28.783 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:06:00.358 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:08:00.372 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:11:00.415 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:12:30.430 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:15:00.450 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:15:34.015 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:15:39.016 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:15:39.022 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 16:15:39.129 WARNING (SyncWorker_2) [custom_components.xiaomi_cloud_map_extractor.camera] Got exception while fetching the state: Unable to discover the device 192.168.1.101
+2023-01-23 16:15:44.017 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:15:46.430 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 16:15:59.022 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:16:14.028 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:16:54.038 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:17:30.494 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:19:44.083 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:21:44.117 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:23:30.589 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:24:01.437 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 16:24:54.169 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:25:00.597 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:26:30.611 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:29:01.437 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 16:29:30.660 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:30:04.260 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:32:00.678 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:36:00.729 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:38:54.415 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:38:59.423 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:38:59.468 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 16:39:03.240 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
+2023-01-23 16:40:34.454 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:40:46.446 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 16:41:29.468 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:42:00.789 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:43:11.430 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 16:44:44.526 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:45:24.541 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:47:00.869 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:48:00.865 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:49:59.610 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:50:30.894 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:51:34.639 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:53:09.665 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 16:54:30.951 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:56:30.990 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:58:31.002 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 16:59:31.017 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:01:01.036 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:04:14.853 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:06:01.100 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:08:54.931 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:09:01.135 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:11:31.189 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:12:31.215 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:13:15.004 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:14:11.436 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 17:14:31.179 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:14:35.028 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:17:31.263 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:18:35.093 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:19:00.098 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:19:31.282 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:22:40.155 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:22:55.159 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:25:31.405 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:26:23.427 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 17:26:31.409 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:28:40.254 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:30:35.290 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:31:01.411 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:31:05.294 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:31:48.426 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 17:33:02.988 WARNING (MainThread) [homeassistant.components.http.security_filter] Filtered a potential harmful request to: /cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh
+2023-01-23 17:35:05.347 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:10.349 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 17:35:10.354 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:10.464 WARNING (SyncWorker_6) [custom_components.xiaomi_cloud_map_extractor.camera] Got exception while fetching the state: Unable to discover the device 192.168.1.101
+2023-01-23 17:35:15.350 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:18.425 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
+2023-01-23 17:35:20.350 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:25.352 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:30.353 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:31.454 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:35:35.354 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:40.355 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:45.356 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:50.358 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:35:55.359 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:05.362 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:10.363 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:10.370 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 17:36:15.364 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:20.365 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:25.366 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:30.368 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:35.369 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:40.369 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:45.371 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:36:50.072 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Yeelight lampadaire' for yeelight integration not ready yet: Timed out trying to the the bulb at 192.168.1.107:55443.; Retrying in background
+2023-01-23 17:36:50.373 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:00.376 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:01.457 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:37:05.378 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:05.385 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 17:37:10.097 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Yeelight lampadaire' for yeelight integration not ready yet: Timed out trying to the the bulb at 192.168.1.107:55443.; Retrying in background
+2023-01-23 17:37:10.378 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:15.379 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:19.853 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Yeelight entree' for yeelight integration not ready yet: Failed to read from the socket at 192.168.1.111:55443: [Errno 113] Connect call failed ('192.168.1.111', 55443).; Retrying in background
+2023-01-23 17:37:20.379 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:25.380 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:30.381 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:35.382 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:40.382 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:45.383 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:37:46.157 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Yeelight lampadaire' for yeelight integration not ready yet: Failed to read from the socket at 192.168.1.107:55443: [Errno 113] Connect call failed ('192.168.1.107', 55443).; Retrying in background
+2023-01-23 17:37:55.387 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:00.389 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:00.395 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 17:38:01.458 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:38:05.390 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:10.391 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:15.391 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:20.392 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:25.394 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:30.396 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:35.396 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:40.398 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:43.692 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Color 0x12c713b3' for yeelight integration not ready yet: Failed to read from the socket at 192.168.1.106:55443: [Errno 113] Connect call failed ('192.168.1.106', 55443).; Retrying in background
+2023-01-23 17:38:50.400 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:55.405 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:38:55.424 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 17:39:00.407 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:01.469 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:39:03.241 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
+2023-01-23 17:39:05.408 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:10.408 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:15.411 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:20.412 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:25.414 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:30.416 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:35.417 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:45.421 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:50.422 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:39:50.429 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 17:39:55.425 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:00.427 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:05.427 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:10.428 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:15.430 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:20.431 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:25.434 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:30.434 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:31.474 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-01-23 17:40:40.436 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:45.437 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:45.445 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 17:40:50.438 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:40:55.441 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:41:00.441 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:41:05.442 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:41:10.443 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:41:15.444 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:41:20.445 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:41:25.447 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:41:35.449 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:41:40.451 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:05
+2023-01-23 17:41:40.458 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-01-23 17:41:50.789 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /homeassistant/restart request
+2023-01-23 17:41:53.388 WARNING (Thread-11 (_do_shutdown)) [homeassistant.util.executor] Thread[SyncWorker_7] is still running at shutdown: File "/usr/local/lib/python3.10/threading.py", line 973, in _bootstrap
     self._bootstrap_inner()
   File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
     self.run()
@@ -72,13 +394,45 @@ homeassistant.exceptions.ConfigEntryNotReady: Error communicating with API: Erro
     work_item.run()
   File "/usr/local/lib/python3.10/concurrent/futures/thread.py", line 58, in run
     result = self.fn(*self.args, **self.kwargs)
-  File "/usr/src/homeassistant/homeassistant/components/xiaomi_miio/__init__.py", line 245, in update
-    device.dnd_status(),
+  File "/config/custom_components/xiaomi_cloud_map_extractor/camera.py", line 273, in update
+    map_name = self._handle_map_name(counter)
+  File "/config/custom_components/xiaomi_cloud_map_extractor/camera.py", line 320, in _handle_map_name
+    map_name = self._vacuum.map()[0]
   File "/usr/local/lib/python3.10/site-packages/miio/click_common.py", line 184, in _wrap
     return func(self, *args, **kwargs)
-  File "/usr/local/lib/python3.10/site-packages/miio/integrations/vacuum/roborock/vacuum.py", line 612, in dnd_status
-    return DNDStatus(self.send("get_dnd_timer")[0])
+  File "/usr/local/lib/python3.10/site-packages/miio/integrations/vacuum/roborock/vacuum.py", line 431, in map
+    return self.send("get_map_v1")
   File "/usr/local/lib/python3.10/site-packages/miio/device.py", line 107, in send
     return self._protocol.send(
-  File "/usr/local/lib/python3.10/site-packages/miio/miioprotocol.py", line 193, in send
-    data, addr = s.recvfrom(4096)
+  File "/usr/local/lib/python3.10/site-packages/miio/miioprotocol.py", line 161, in send
+    self.send_handshake()
+  File "/usr/local/lib/python3.10/site-packages/miio/miioprotocol.py", line 65, in send_handshake
+    m = MiIOProtocol.discover(self.ip)
+  File "/usr/local/lib/python3.10/site-packages/miio/miioprotocol.py", line 119, in discover
+    data, recv_addr = s.recvfrom(1024)
+2023-01-23 17:41:54.390 WARNING (Thread-11 (_do_shutdown)) [homeassistant.util.executor] Thread[SyncWorker_7] is still running at shutdown: File "/usr/local/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/concurrent/futures/thread.py", line 83, in _worker
+    work_item.run()
+  File "/usr/local/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/config/custom_components/xiaomi_cloud_map_extractor/camera.py", line 273, in update
+    map_name = self._handle_map_name(counter)
+  File "/config/custom_components/xiaomi_cloud_map_extractor/camera.py", line 320, in _handle_map_name
+    map_name = self._vacuum.map()[0]
+  File "/usr/local/lib/python3.10/site-packages/miio/click_common.py", line 184, in _wrap
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/miio/integrations/vacuum/roborock/vacuum.py", line 431, in map
+    return self.send("get_map_v1")
+  File "/usr/local/lib/python3.10/site-packages/miio/device.py", line 107, in send
+    return self._protocol.send(
+  File "/usr/local/lib/python3.10/site-packages/miio/miioprotocol.py", line 161, in send
+    self.send_handshake()
+  File "/usr/local/lib/python3.10/site-packages/miio/miioprotocol.py", line 65, in send_handshake
+    m = MiIOProtocol.discover(self.ip)
+  File "/usr/local/lib/python3.10/site-packages/miio/miioprotocol.py", line 119, in discover
+    data, recv_addr = s.recvfrom(1024)

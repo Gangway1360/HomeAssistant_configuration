@@ -102,3 +102,5 @@ camera:
     draw: ['all']
     attributes:
       - calibration_points
+#   colors:
+#      color_map_outside:  [0, 0, 0, 0]

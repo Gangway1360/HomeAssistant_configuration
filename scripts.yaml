@@ -118,3 +118,19 @@ s_aspirateur_tapis:
         - 31122
   mode: single
   icon: mdi:robot-vacuum
+compteur_mouvement:
+  alias: S_Compteur-mouvement
+  sequence:
+  - service: counter.increment
+    entity_id: counter.detection_mouvement
+  mode: single
+  icon: mdi:motion-sensor
+reinitialiser_compteur_capteur:
+  alias: Réinitialiser_compteur_capteur
+  sequence:
+  - service: counter.reset
+    data: {}
+    target:
+      entity_id: counter.detection_mouvement
+  mode: single
+  icon: mdi:motion-sensor-off
