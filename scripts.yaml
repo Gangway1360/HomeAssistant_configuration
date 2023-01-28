@@ -122,7 +122,9 @@ compteur_mouvement:
   alias: S_Compteur-mouvement
   sequence:
   - service: counter.increment
-    entity_id: counter.detection_mouvement
+    data: {}
+    target:
+      entity_id: counter.detection_mouvement
   mode: single
   icon: mdi:motion-sensor
 reinitialiser_compteur_capteur:

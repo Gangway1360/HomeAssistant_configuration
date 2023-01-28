@@ -44,13 +44,13 @@
       domain: device_tracker
       entity_id: device_tracker.super21
       type: is_home
-      enabled: false
+      enabled: true
     - type: is_illuminance
       condition: device
       device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
       entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
       domain: sensor
-      below: 60
+      below: 65
   action:
   - type: turn_on
     device_id: 687dad33e6d70811a28a821055adccd4
@@ -67,6 +67,7 @@
     type: notify
     message: Lumières ON. Du mouvement
     title: Automatisation
+    enabled: false
   mode: single
 - id: '1674056461573'
   alias: Salon_NoMouvement-3min_lights_OFF
@@ -82,33 +83,11 @@
       minutes: 3
       seconds: 0
   condition:
-  - condition: or
-    conditions:
-    - condition: device
-      device_id: 1ef132b28f63368f6b81c3e09867065a
-      domain: media_player
-      entity_id: media_player.tele
-      type: is_idle
-    - condition: device
-      device_id: 1ef132b28f63368f6b81c3e09867065a
-      domain: media_player
-      entity_id: media_player.tele
-      type: is_off
-  - condition: and
-    conditions:
-    - condition: or
-      conditions:
-      - condition: device
-        type: is_on
-        device_id: 687dad33e6d70811a28a821055adccd4
-        entity_id: light.yeelight_color_entree
-        domain: light
-      - condition: device
-        type: is_on
-        device_id: 56937e4fc50a2019406b0874255917cd
-        entity_id: light.yeelight_color_lampadaire
-        domain: light
-    enabled: false
+  - condition: device
+    type: is_off
+    device_id: dbfcac9e2516dd6484ff2261d038bcd2
+    entity_id: light.hyperhdr_priority
+    domain: light
   action:
   - type: turn_off
     device_id: 687dad33e6d70811a28a821055adccd4
@@ -133,7 +112,7 @@
     device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
     entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
     domain: sensor
-    above: 70
+    above: 75
   condition:
   - condition: or
     conditions:
@@ -217,25 +196,6 @@
     entity_id: light.hyperhdr
     domain: light
   mode: single
-- id: '1674120488553'
-  alias: Salon_nuit_SensibilitéMouvement_Low
-  description: ''
-  trigger:
-  - platform: sun
-    event: sunset
-    offset: 0
-  condition:
-  - condition: time
-    after: 00:00:00
-    before: 06:00:00
-    weekday: []
-  action:
-  - device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
-    domain: select
-    entity_id: select.0x54ef4410005a8dc9_motion_sensitivity
-    type: select_option
-    option: low
-  mode: single
 - id: '1674132477823'
   alias: Github_Push configuration-23h23min23
   description: ''
@@ -244,10 +204,10 @@
     at: '23:23:23'
   condition: []
   action:
-  - service: hassio.addon_stdin
-    data:
+  - data:
       addon: a0d7b954_ssh
       input: /config/ha_gitpush.sh
+    service: hassio.addon_stdin
   mode: single
 - id: '1674471967437'
   alias: NFC cuisine
@@ -342,6 +302,14 @@
     conditions:
     - condition: time
       after: 06:00:00
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - sat
+      - fri
+      - sun
     - type: is_illuminance
       condition: device
       device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
@@ -351,6 +319,11 @@
     - condition: numeric_state
       entity_id: counter.detection_mouvement
       below: 1
+    - type: is_not_plugged_in
+      condition: device
+      device_id: 2b61395c28cf69b6694f9a88c35a9df6
+      entity_id: binary_sensor.super21_is_charging
+      domain: binary_sensor
     enabled: true
   action:
   - service: script.compteur_mouvement
@@ -360,4 +333,38 @@
     device_id: 687dad33e6d70811a28a821055adccd4
     entity_id: light.yeelight_color_entree
     domain: light
+    enabled: true
+  mode: single
+- id: '1674746964767'
+  alias: Reset compteur mouvement
+  description: ''
+  trigger:
+  - platform: time
+    at: 05:00:00
+  condition: []
+  action:
+  - service: counter.reset
+    data: {}
+    target:
+      entity_id: counter.detection_mouvement
+  mode: single
+- id: '1674863068011'
+  alias: Compteur Aqara
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+    entity_id: binary_sensor.0x54ef4410005a8dc9_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: script.compteur_mouvement
+    data: {}
+    enabled: false
+  - service: counter.increment
+    data: {}
+    enabled: true
+    target:
+      entity_id: counter.detection_mouvement
   mode: single
