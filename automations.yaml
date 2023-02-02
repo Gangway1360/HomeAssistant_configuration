@@ -51,6 +51,11 @@
       entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
       domain: sensor
       below: 65
+    - condition: device
+      type: is_off
+      device_id: dbfcac9e2516dd6484ff2261d038bcd2
+      entity_id: light.hyperhdr_priority
+      domain: light
   action:
   - type: turn_on
     device_id: 687dad33e6d70811a28a821055adccd4
@@ -188,7 +193,7 @@
     device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
     entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
     domain: sensor
-    above: 60
+    above: 70
     enabled: true
   action:
   - type: turn_off
@@ -202,13 +207,11 @@
   trigger:
   - platform: time
     at: '23:23:23'
-  condition: []
   action:
   - data:
       addon: a0d7b954_ssh
       input: /config/ha_gitpush.sh
     service: hassio.addon_stdin
-  mode: single
 - id: '1674471967437'
   alias: NFC cuisine
   description: ''
@@ -334,6 +337,8 @@
     entity_id: light.yeelight_color_entree
     domain: light
     enabled: true
+    brightness_pct: 10
+    flash: long
   mode: single
 - id: '1674746964767'
   alias: Reset compteur mouvement
