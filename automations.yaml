@@ -373,3 +373,28 @@
     target:
       entity_id: counter.detection_mouvement
   mode: single
+- id: '1675435936823'
+  alias: Update notifications
+  description: ''
+  use_blueprint:
+    path: mdegat01/update_notifications.yaml
+    input:
+      reminder_hours: '3'
+      update_entities:
+      - update.0x54ef4410005a8dc9
+      - update.duck_dns_update
+      - update.file_editor_update
+      - update.home_assistant_core_update
+      - update.home_assistant_operating_system_update
+      - update.home_assistant_supervisor_update
+      - update.hacs_update
+      - update.hyperhdr_update
+      - update.let_s_encrypt_update
+      - update.mosquitto_broker_update
+      - update.my_ecowatt_by_rte_update
+      - update.nextcloud_backup_update
+      - update.samba_share_update
+      - update.ssh_web_terminal_update
+      - update.zigbee2mqtt_update
+      - update.xiaomi_cloud_map_extractor_update
+      mobile_app_device: 2b61395c28cf69b6694f9a88c35a9df6

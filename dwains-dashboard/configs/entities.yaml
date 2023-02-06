@@ -1,24 +1,254 @@
 binary_sensor.archer_mr600_wan_status:
   sort_order: 1
+  hidden: false
 binary_sensor.super21_is_charging:
   sort_order: 2
+  hidden: false
 device_tracker.super21:
   sort_order: 3
+  hidden: false
 sensor.archer_mr600_external_ip:
   sort_order: 4
+  hidden: false
 sensor.archer_mr600_kib_s_received:
   sort_order: 5
+  hidden: false
 sensor.archer_mr600_kib_s_sent:
   sort_order: 6
+  hidden: false
 sensor.super21_battery_level:
   sort_order: 7
+  hidden: false
 sensor.super21_battery_state:
   sort_order: 8
+  hidden: false
 sensor.super21_charger_type:
   sort_order: 9
+  hidden: false
 sensor.super21_battery_health:
   sort_order: 10
+  hidden: false
 sensor.super21_battery_temperature:
   sort_order: 11
+  hidden: false
 sensor.super21_battery_power:
   sort_order: 12
+  hidden: false
+binary_sensor.0x54ef4410005a8dc9_occupancy:
+  hidden: true
+  excluded: true
+  disabled: true
+  friendly_name: ''
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+binary_sensor.0x54ef4410005a8dc9_update_available:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: "Mise \xE0 jour"
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+button.lg_webos_tv_214e_identify:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: LG webOS
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+light.hyperhdr_priority:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: HyperHDR
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+number.0x54ef4410005a8dc9_detection_interval:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: Aqara interval
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+select.0x54ef4410005a8dc9_motion_sensitivity:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: "Aqara sensibilit\xE9"
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+sensor.0x54ef4410005a8dc9_illuminance_lux:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: "Aqara luminosit\xE9"
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+sensor.0x54ef4410005a8dc9_illuminance:
+  hidden: true
+sensor.0x54ef4410005a8dc9_device_temperature:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: "Aqara temp\xE9rature"
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+sensor.0x54ef4410005a8dc9_battery:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: Aqara batterie
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+sensor.0x54ef4410005a8dc9_update_state:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: Aqara update
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+sensor.victor_last_clean_start:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: "Victor derni\xE9 nettoyage"
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+sensor.super21_last_reboot:
+  hidden: false
+  excluded: false
+  disabled: false
+  friendly_name: "Super21 derni\xE9 reboot"
+  col_span: '1'
+  row_span: '1'
+  col_span_lg: '1'
+  row_span_lg: '1'
+  col_span_xl: '1'
+  row_span_xl: '1'
+  custom_card: false
+  custom_popup: false
+sensor.super21_geocoded_location:
+  hidden: false
+binary_sensor.super21_high_accuracy_mode:
+  hidden: false
+sensor.super21_high_accuracy_update_interval:
+  hidden: false
+sensor.super21_wifi_connection:
+  hidden: false
+sensor.super21_next_alarm:
+  hidden: false
+sensor.super21_sim_1:
+  hidden: false
+select.maison:
+  hidden: false
+climate.salon:
+  hidden: false
+sensor.thermostat_battery_percent:
+  hidden: false
+sensor.ecowatt_level_today:
+  hidden: false
+sensor.ecowatt_level_now:
+  hidden: false
+calendar.ecowatt_downgraded_level:
+  hidden: false
+binary_sensor.victor_mop_attached:
+  hidden: false
+binary_sensor.victor_water_box_attached:
+  hidden: false
+sensor.victor_dnd_start:
+  hidden: false
+sensor.victor_dnd_end:
+  hidden: false
+sensor.victor_last_clean_end:
+  hidden: false
+sensor.victor_last_clean_duration:
+  hidden: false
+sensor.victor_last_clean_area:
+  hidden: false
+sensor.victor_current_clean_duration:
+  hidden: false
+sensor.victor_current_clean_area:
+  hidden: false
+sensor.victor_total_duration:
+  hidden: false
+sensor.victor_total_clean_area:
+  hidden: false
+sensor.victor_total_clean_count:
+  hidden: false
+sensor.victor_main_brush_left:
+  hidden: false
+sensor.victor_side_brush_left:
+  hidden: false
+sensor.victor_filter_left:
+  hidden: false
+sensor.victor_sensor_dirty_left:
+  hidden: false
+vacuum.victor:
+  hidden: false
+sensor.ecowatt_level_tomorrow:
+  hidden: false
