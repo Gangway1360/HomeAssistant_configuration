@@ -35,7 +35,7 @@
     for:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 5
   condition:
   - condition: and
     conditions:
@@ -155,7 +155,7 @@
     device_id: dbfcac9e2516dd6484ff2261d038bcd2
     entity_id: switch.hyperhdr_component_led_device
     domain: switch
-    enabled: false
+    enabled: true
   - platform: device
     device_id: cccadbb1f56557877997f87d8d3b291c
     domain: media_player
@@ -210,8 +210,9 @@
   action:
   - data:
       addon: a0d7b954_ssh
-      input: /config/ha_gitpush.sh
+      input: ./config/ha_gitpush.sh
     service: hassio.addon_stdin
+    enabled: true
 - id: '1674471967437'
   alias: NFC cuisine
   description: ''

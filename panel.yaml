@@ -1,0 +1,10 @@
+#Ajouter le menu Automatisation dans la barre de menu
+  - name: automations
+    sidebar_title: Automatisations
+    sidebar_icon: mdi:arrow-decision
+    js_url: /api/hassio/app/entrypoint.js
+    url_path: "config/automation/dashboard"
+    embed_iframe: true
+    require_admin: true
+    config:
+      ingress: core_configurator

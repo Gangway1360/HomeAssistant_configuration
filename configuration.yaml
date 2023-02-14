@@ -20,3 +20,4 @@ scene: !include scenes.yaml
 sensor: !include sensors.yaml
 template: !include templates.yaml
 camera: !include camera.yaml
+panel_custom: !include panel.yaml
