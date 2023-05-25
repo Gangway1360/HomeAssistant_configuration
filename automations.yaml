@@ -91,8 +91,8 @@
   - condition: device
     type: is_off
     device_id: dbfcac9e2516dd6484ff2261d038bcd2
-    entity_id: light.hyperhdr_priority
-    domain: light
+    entity_id: switch.hyperhdr_component_led_device
+    domain: switch
   action:
   - type: turn_off
     device_id: 687dad33e6d70811a28a821055adccd4
@@ -107,6 +107,7 @@
     type: notify
     message: Plus de mouvements. Lumières Off
     title: Automatisations
+    enabled: false
   mode: single
 - id: '1674057301650'
   alias: Salon_lux_light_Off
@@ -117,7 +118,7 @@
     device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
     entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
     domain: sensor
-    above: 75
+    above: 70
   condition:
   - condition: or
     conditions:
@@ -151,27 +152,23 @@
   description: ''
   trigger:
   - platform: device
-    type: turned_on
-    device_id: dbfcac9e2516dd6484ff2261d038bcd2
-    entity_id: switch.hyperhdr_component_led_device
-    domain: switch
-    enabled: true
-  - platform: device
+    type: changed_states
     device_id: cccadbb1f56557877997f87d8d3b291c
-    domain: media_player
     entity_id: media_player.android_tv_192_168_1_115
-    type: playing
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 3
+    domain: media_player
   condition:
-  - condition: device
-    type: is_on
-    device_id: 687dad33e6d70811a28a821055adccd4
-    entity_id: light.yeelight_color_entree
-    domain: light
-    enabled: true
+  - condition: and
+    conditions:
+    - condition: device
+      type: is_on
+      device_id: 687dad33e6d70811a28a821055adccd4
+      entity_id: light.yeelight_color_entree
+      domain: light
+    - condition: device
+      device_id: cccadbb1f56557877997f87d8d3b291c
+      domain: media_player
+      entity_id: media_player.android_tv_192_168_1_115
+      type: is_playing
   action:
   - type: turn_off
     device_id: 687dad33e6d70811a28a821055adccd4
@@ -269,17 +266,6 @@
     domain: media_player
     entity_id: media_player.android_tv_192_168_1_115
     type: paused
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 20
-    enabled: false
-  - platform: device
-    device_id: cccadbb1f56557877997f87d8d3b291c
-    domain: media_player
-    entity_id: media_player.android_tv_192_168_1_115
-    type: turned_off
-    enabled: true
   condition:
   - condition: device
     type: is_on
@@ -399,3 +385,79 @@
       - update.zigbee2mqtt_update
       - update.xiaomi_cloud_map_extractor_update
       mobile_app_device: 2b61395c28cf69b6694f9a88c35a9df6
+- id: '1677834702352'
+  alias: Rentre à la maison
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: device_tracker
+    entity_id: device_tracker.super21
+    type: enters
+    zone: zone.home
+  condition:
+  - condition: and
+    conditions:
+    - type: is_motion
+      condition: device
+      device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+      entity_id: binary_sensor.0x54ef4410005a8dc9_occupancy
+      domain: binary_sensor
+    - condition: device
+      device_id: cccadbb1f56557877997f87d8d3b291c
+      domain: media_player
+      entity_id: media_player.android_tv_192_168_1_115
+      type: is_off
+    - type: is_illuminance
+      condition: device
+      device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+      entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
+      domain: sensor
+      below: 65
+  action:
+  - type: turn_on
+    device_id: 687dad33e6d70811a28a821055adccd4
+    entity_id: light.yeelight_color_entree
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1678007744793'
+  alias: Détection chat
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+    entity_id: binary_sensor.0x54ef4410005a8dc9_occupancy
+    domain: binary_sensor
+  condition:
+  - condition: device
+    device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: device_tracker
+    entity_id: device_tracker.super21
+    type: is_not_home
+  action:
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    title: Présence
+    message: 'Détection d''un individu (chat) '
+  mode: single
+- id: '1678093524321'
+  alias: Batterie thermostat
+  description: ''
+  trigger:
+  - type: battery_level
+    platform: device
+    device_id: ff2f0e3339cc5e99b00b9492cd26e0f5
+    entity_id: sensor.thermostat_battery_percent
+    domain: sensor
+    below: 50
+  condition: []
+  action:
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    message: Batterie thermostat inf à 50%
+    title: Batterie alerte
+  mode: single

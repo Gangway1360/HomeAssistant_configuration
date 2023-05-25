@@ -136,3 +136,127 @@ reinitialiser_compteur_capteur:
       entity_id: counter.detection_mouvement
   mode: single
   icon: mdi:motion-sensor-off
+aspirateur_selection_zones:
+  alias: 'S_Aspirateur: sélection zones'
+  mode: single
+  icon: mdi:robot-vacuum-variant
+  sequence:
+  - if:
+    - condition: state
+      entity_id: input_boolean.bureau
+      state: 'on'
+    then:
+    - service: script.s_aspirateur_bureau
+      data: {}
+  - condition: state
+    entity_id: script.s_aspirateur_bureau
+    state: 'off'
+  - service: input_boolean.toggle
+    data: {}
+    target:
+      entity_id: input_boolean.bureau
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - if:
+    - condition: state
+      entity_id: input_boolean.toilette
+      state: 'on'
+    then:
+    - service: script.s_aspirateur_toilette
+      data: {}
+  - condition: state
+    entity_id: script.s_aspirateur_toilette
+    state: 'off'
+  - service: input_boolean.toggle
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.toilette
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - if:
+    - condition: state
+      entity_id: input_boolean.salledebain
+      state: 'on'
+    then:
+    - service: script.s_aspirateur_salledebain
+      data: {}
+  - condition: state
+    entity_id: script.s_aspirateur_salledebain
+    state: 'off'
+  - service: input_boolean.toggle
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.salledebain
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - if:
+    - condition: state
+      entity_id: input_boolean.chambre
+      state: 'on'
+    then:
+    - service: script.s_aspirateur_chambre
+      data: {}
+  - condition: state
+    entity_id: script.s_aspirateur_chambre
+    state: 'off'
+  - service: input_boolean.toggle
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.chambre
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - if:
+    - condition: state
+      entity_id: input_boolean.salon
+      state: 'on'
+    then:
+    - service: script.s_aspirateur_salon_cuisine
+      data: {}
+  - condition: state
+    entity_id: script.s_aspirateur_salon_cuisine
+    state: 'off'
+  - service: input_boolean.toggle
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.salon
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - if:
+    - condition: state
+      entity_id: input_boolean.dressing
+      state: 'on'
+    then:
+    - service: script.s_aspirateur_dressing
+      data: {}
+  - condition: state
+    entity_id: script.s_aspirateur_dressing
+    state: 'off'
+  - service: input_boolean.toggle
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.dressing
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0

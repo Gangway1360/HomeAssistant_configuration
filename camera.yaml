@@ -9,5 +9,9 @@
     draw: ['all']
     attributes:
       - calibration_points
-    colors:
-      color_map_outside:  [17, 17, 17, 17]
+    scan_interval:
+      seconds: 10
+    auto_update: true
+    store_map_raw: false
+    store_map_image: true
+    force_api: xiaomi
