@@ -21,8 +21,3 @@ sensor: !include sensors.yaml
 template: !include templates.yaml
 camera: !include camera.yaml
 panel_custom: !include panel.yaml
-
-binary_sensor:
-  - platform: command_line
-    name: Push Github
-    command: "./ha_gitpush.sh"
