@@ -199,17 +199,12 @@
     domain: light
   mode: single
 - id: '1674132477823'
-  alias: Github_Push configuration-23h23min23
+  alias: Github_Push configuration
   description: ''
-  trigger:
-  - platform: time
-    at: '23:23:23'
+  trigger: []
   action:
-  - data:
-      addon: a0d7b954_ssh
-      input: ./config/ha_gitpush.sh
-    service: hassio.addon_stdin
-    enabled: true
+  - service: shell_command.pushconfiguration_github
+    data: {}
 - id: '1674471967437'
   alias: NFC cuisine
   description: ''
