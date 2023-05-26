@@ -23,4 +23,4 @@ camera: !include camera.yaml
 panel_custom: !include panel.yaml
 
 shell_command:
-  pushconfiguration_github: /bin/bash ha_gitpush.sh
+  pushconfiguration_github: /bin/bash /config/ha_gitpush.sh
