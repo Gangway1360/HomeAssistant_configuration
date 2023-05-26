@@ -22,5 +22,6 @@ template: !include templates.yaml
 camera: !include camera.yaml
 panel_custom: !include panel.yaml
 
+#Pour executer de push Github depuis HA
 shell_command:
   pushconfiguration_github: /bin/bash /config/ha_gitpush.sh
