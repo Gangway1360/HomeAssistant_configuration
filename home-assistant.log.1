@@ -1,687 +1,129 @@
-2023-05-25 17:49:42.791 WARNING (SyncWorker_3) [homeassistant.loader] We found a custom integration dwains_dashboard which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-05-25 17:49:42.803 WARNING (SyncWorker_3) [homeassistant.loader] We found a custom integration xiaomi_cloud_map_extractor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-05-25 17:49:42.812 WARNING (SyncWorker_3) [homeassistant.loader] We found a custom integration hyperhdr which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-05-25 17:49:42.820 WARNING (SyncWorker_3) [homeassistant.loader] We found a custom integration ui_lovelace_minimalist which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-05-25 17:49:42.827 WARNING (SyncWorker_3) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-05-25 17:49:42.836 WARNING (SyncWorker_3) [homeassistant.loader] We found a custom integration rte_ecowatt which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2023-05-25 17:50:31.805 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform command_line is taking over 10 seconds.
-2023-05-25 17:50:32.482 WARNING (MainThread) [homeassistant.setup] Setup of input_button is taking over 10 seconds.
-2023-05-25 17:50:32.489 WARNING (MainThread) [homeassistant.setup] Setup of counter is taking over 10 seconds.
-2023-05-25 17:50:32.496 WARNING (MainThread) [homeassistant.setup] Setup of input_select is taking over 10 seconds.
-2023-05-25 17:50:34.823 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
-2023-05-25 17:51:18.110 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Victor' for xiaomi_miio integration not ready yet; Retrying in background
-2023-05-25 17:51:18.196 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Malissard' for accuweather integration not ready yet; Retrying in background
-2023-05-25 17:51:18.865 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Yeelight balcon chambre' for yeelight integration not ready yet: Could not fetch initial state; try power cycling the device; Retrying in background
-2023-05-25 17:51:19.306 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Ambilight' for hyperhdr integration not ready yet: None; Retrying in background
-2023-05-25 17:51:19.380 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/yeelight/aio.py", line 130, in _async_run_listen
-    await self._async_connection_loop()
-  File "/usr/local/lib/python3.10/site-packages/yeelight/aio.py", line 275, in _async_connection_loop
-    future.set_result(decoded_line)
-asyncio.exceptions.InvalidStateError: invalid state
-2023-05-25 17:51:25.633 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.115:5555.  TcpTimeoutException: Connecting to 192.168.1.115:5555 timed out (1.0 seconds)
-2023-05-25 17:51:25.659 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Chromecast TV' for androidtv integration not ready yet: Could not connect to Android device at 192.168.1.115:5555 using Python ADB implementation with adbkey='/config/.storage/androidtv_adbkey'; Retrying in background
-2023-05-25 17:51:29.591 ERROR (MainThread) [homeassistant.components.sensor] Platform rte_ecowatt does not generate unique IDs. ID ecowatt-level-in-0-hours already exists - ignoring sensor.ecowatt_level_now
-2023-05-25 17:51:33.714 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 17:52:08.427 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
-2023-05-25 17:52:08.439 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform accuweather is taking over 10 seconds.
-2023-05-25 17:52:08.448 WARNING (MainThread) [homeassistant.components.weather] Setup of weather platform accuweather is taking over 10 seconds.
-2023-05-25 17:52:08.884 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-25 17:52:08.957 ERROR (MainThread) [homeassistant.components.mobile_app.notify] Timeout sending notification to https://mobile-apps.home-assistant.io/api/sendPush/android/v1
-2023-05-25 17:52:12.274 WARNING (MainThread) [homeassistant.components.androidtv_remote.remote] Disconnected from Télé at 192.168.1.115
-2023-05-25 17:52:28.473 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-25 17:52:28.567 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
-2023-05-25 17:52:30.190 ERROR (MainThread) [homeassistant.components.shell_command] Error running command: `/bin/bash ha_gitpush.sh`, return code: 128
+2023-05-26 09:30:04.541 WARNING (SyncWorker_4) [homeassistant.loader] We found a custom integration dwains_dashboard which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-05-26 09:30:04.553 WARNING (SyncWorker_4) [homeassistant.loader] We found a custom integration xiaomi_cloud_map_extractor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-05-26 09:30:04.561 WARNING (SyncWorker_4) [homeassistant.loader] We found a custom integration hyperhdr which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-05-26 09:30:04.568 WARNING (SyncWorker_4) [homeassistant.loader] We found a custom integration ui_lovelace_minimalist which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-05-26 09:30:04.583 WARNING (SyncWorker_4) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-05-26 09:30:04.590 WARNING (SyncWorker_4) [homeassistant.loader] We found a custom integration rte_ecowatt which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-05-26 09:30:56.974 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform command_line is taking over 10 seconds.
+2023-05-26 09:30:57.066 WARNING (MainThread) [homeassistant.setup] Setup of counter is taking over 10 seconds.
+2023-05-26 09:31:22.020 WARNING (MainThread) [homeassistant.setup] Setup of input_select is taking over 10 seconds.
+2023-05-26 09:31:22.026 WARNING (MainThread) [homeassistant.setup] Setup of input_button is taking over 10 seconds.
+2023-05-26 09:31:22.033 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
+2023-05-26 09:31:53.753 ERROR (MainThread) [homeassistant.components.sensor] Platform rte_ecowatt does not generate unique IDs. ID ecowatt-level-in-0-hours already exists - ignoring sensor.ecowatt_level_now
+2023-05-26 09:31:54.880 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:32:01.018 ERROR (MainThread) [homeassistant.components.shell_command] Error running command: `/bin/bash /config/ha_gitpush.sh`, return code: 128
 NoneType: None
-2023-05-25 17:53:09.584 ERROR (SyncWorker_2) [miio.miioprotocol] Got error when receiving: timed out
-2023-05-25 17:54:08.487 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 17:57:38.486 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 17:59:38.497 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:07:33.451 ERROR (MainThread) [custom_components.rte_ecowatt] Error fetching ecowatt api data: Error communicating with API: (missing_token) Missing access token parameter.
-2023-05-25 18:08:08.553 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:10:08.563 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:15:38.556 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:18:38.567 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:20:08.580 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:25:40.436 ERROR (MainThread) [homeassistant] Error doing job: Unclosed client session
-2023-05-25 18:30:38.602 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:32:08.605 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:40:08.635 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:41:40.526 ERROR (MainThread) [homeassistant] Error doing job: Unclosed client session
-2023-05-25 18:42:08.659 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:46:08.668 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:47:38.659 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:49:38.665 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:50:44.884 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-25 18:52:38.700 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:54:08.706 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 18:57:40.555 ERROR (MainThread) [homeassistant] Error doing job: Unclosed client session
-2023-05-25 19:07:38.748 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:09:38.756 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:11:38.761 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:13:40.628 ERROR (MainThread) [homeassistant] Error doing job: Unclosed client session
-2023-05-25 19:16:08.773 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:19:38.780 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:21:08.784 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:22:38.787 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:24:08.790 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:26:08.795 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:27:08.797 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:32:08.813 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:37:32.427 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
-2023-05-25 19:38:38.831 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:39:38.835 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:41:08.840 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:48:38.889 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:50:38.903 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:50:44.886 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-25 19:52:08.926 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 19:55:39.289 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:02:39.277 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:04:09.273 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:09:39.280 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:12:09.286 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:15:09.309 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:19:09.319 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:21:09.323 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:23:09.328 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:25:39.335 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:28:39.345 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:29:39.347 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:31:09.351 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:32:09.353 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:33:39.357 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:35:09.361 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:36:39.366 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:38:09.373 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:39:09.375 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:44:39.384 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:47:09.390 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:48:39.392 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:49:39.395 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:50:44.884 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-25 20:52:39.403 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:53:39.405 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 20:55:39.410 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:00:09.433 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:01:39.436 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:04:09.444 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:05:09.447 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:06:39.452 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:14:09.471 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:16:09.475 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:17:39.479 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:19:09.481 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:21:09.486 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:22:39.488 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:24:09.491 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:26:39.496 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:29:39.507 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:31:39.653 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:34:39.646 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:36:09.651 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:37:39.655 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:41:09.676 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:42:09.666 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:46:09.684 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:49:09.695 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:50:39.695 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:50:44.884 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-25 21:52:09.697 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:53:09.698 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:54:09.702 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:55:46.496 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for sensor.swap_use (<class 'homeassistant.components.systemmonitor.sensor.SystemMonitorSensor'>) took 2.060 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+systemmonitor%22
-2023-05-25 21:56:09.707 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 21:57:39.710 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:00:09.715 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:02:09.720 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:06:09.730 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:07:39.733 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:09:09.736 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:17:09.786 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:19:09.790 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:20:39.792 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:22:39.798 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:25:39.807 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:28:10.525 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:29:10.528 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:32:10.534 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:33:10.535 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:34:10.537 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:36:10.542 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:39:10.548 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:40:10.552 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:41:10.553 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:47:10.575 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:48:40.578 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:50:40.586 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:50:44.888 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-25 22:52:10.590 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:54:40.595 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:56:10.600 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 22:59:10.608 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:04:40.657 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:05:40.660 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:06:40.663 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:07:40.665 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:10:10.692 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:12:10.696 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:18:10.712 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:19:40.715 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:21:41.603 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:32:11.628 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:35:11.637 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:36:11.641 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:38:11.647 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:40:11.651 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:41:11.654 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:42:11.658 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:43:41.662 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:45:11.669 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:50:41.687 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:50:44.891 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-25 23:52:11.691 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:53:11.689 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:54:41.694 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:58:11.703 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-25 23:59:41.707 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:07:41.733 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:09:41.736 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:14:11.751 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:15:41.756 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:16:42.661 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:17:42.650 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:19:12.646 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:20:42.649 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:24:42.661 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:28:12.671 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:30:42.676 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:32:42.680 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:33:42.683 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:35:42.688 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:37:42.695 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:44:12.744 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:45:12.745 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:46:42.749 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:49:12.754 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:50:44.886 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-26 00:52:12.764 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:53:12.765 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 00:57:12.776 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:00:12.784 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:01:12.787 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:02:12.790 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:03:42.794 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:05:42.799 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:08:12.807 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:09:42.810 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:12:13.445 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:20:13.470 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:22:13.480 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:25:13.485 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:26:43.509 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:28:13.510 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:31:13.529 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:36:43.545 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:37:43.547 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:39:13.550 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:40:13.552 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:41:13.553 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:42:43.556 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:44:43.560 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:48:13.568 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:50:44.889 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-26 01:57:43.696 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 01:59:13.699 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:00:43.708 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:01:43.704 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:02:43.708 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:04:43.715 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:12:44.604 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:14:44.609 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:17:14.616 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:18:14.621 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:23:44.635 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:27:44.689 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:28:44.691 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:32:44.705 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:34:44.711 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:36:44.714 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:40:14.725 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:41:14.726 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:43:14.731 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:48:14.748 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:49:14.749 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:50:44.891 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-26 02:52:14.760 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:53:44.767 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:56:14.777 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:58:14.783 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 02:58:27.257 WARNING (Thread-7) [pychromecast.socket_client] [Jarvis(192.168.1.108):8009] Heartbeat timeout, resetting connection
-2023-05-26 02:58:44.639 ERROR (Thread-7) [pychromecast.socket_client] [Jarvis(192.168.1.108):8009] Failed to connect to service ServiceInfo(type='host', data=('192.168.1.108', 8009)), retrying in 5.0s
-2023-05-26 02:59:44.785 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:00:44.789 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:01:45.496 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:03:45.493 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:06:35.537 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 03:06:35.548 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
-2023-05-26 03:06:43.400 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
-2023-05-26 03:06:45.538 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 03:06:55.540 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 03:07:05.542 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 03:11:15.504 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:14:15.511 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:17:15.517 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:19:15.521 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:22:45.530 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:25:15.537 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:26:15.538 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:30:15.546 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:32:15.551 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:33:45.553 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:35:15.556 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:40:15.571 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:50:15.597 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:50:44.897 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-26 03:54:45.605 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:55:45.608 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:58:46.351 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 03:59:46.356 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:01:16.363 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:04:46.375 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:05:46.379 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:07:16.385 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:08:46.395 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:10:16.396 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:11:16.398 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:12:16.404 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:15:46.415 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:17:46.420 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:20:46.433 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:21:46.435 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:23:46.441 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:30:16.461 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:30:58.865 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/aiohttp/web_protocol.py", line 332, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp/_http_parser.pyx", line 551, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadHttpMessage: 400, message='Pause on PRI/Upgrade'
-2023-05-26 04:34:16.477 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:35:46.482 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:37:16.488 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:39:16.497 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:42:46.511 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:46:46.525 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:47:46.529 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:48:46.533 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:50:44.893 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-26 04:52:16.546 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:53:46.550 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:54:46.554 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:57:16.563 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:58:16.567 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 04:59:16.569 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:00:46.575 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:10:16.606 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:11:16.607 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:12:46.611 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:13:46.614 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:15:46.619 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:18:37.981 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 05:18:37.991 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
-2023-05-26 05:18:55.400 ERROR (MainThread) [homeassistant.components.xiaomi_miio] Timeout fetching Victor data
-2023-05-26 05:19:07.987 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 05:19:07.992 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
-2023-05-26 05:19:13.841 ERROR (SyncWorker_8) [miio.miioprotocol] Got error when receiving: timed out
-2023-05-26 05:19:17.989 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 05:19:27.992 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 05:19:37.994 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 05:19:46.631 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:19:58.002 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
-2023-05-26 05:19:58.012 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 05:20:08.004 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
-2023-05-26 05:21:46.639 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:25:16.650 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:27:46.658 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:29:16.661 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:30:46.665 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:32:16.669 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:34:16.676 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:35:16.678 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:38:46.688 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:41:16.694 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:42:46.699 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:46:16.708 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:47:46.711 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:49:16.713 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:50:44.896 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-26 05:50:46.731 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:55:16.739 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:57:16.748 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:58:16.752 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 05:59:16.755 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:01:16.763 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:02:16.766 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:05:16.774 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:07:46.782 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:09:16.787 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:10:46.792 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:12:16.797 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:13:46.802 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:20:46.822 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:25:16.836 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:26:16.842 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:27:16.845 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:28:46.851 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:30:16.859 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:33:16.870 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:34:46.875 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:36:16.881 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:41:16.901 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:43:16.908 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:44:46.913 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:47:46.928 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:50:44.896 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-26 06:50:46.937 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:52:16.944 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:54:16.948 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 06:55:16.950 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:00:46.971 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:04:46.987 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:08:17.001 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:13:17.023 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:16:47.034 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:18:47.041 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:23:17.059 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:26:17.068 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:27:47.073 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:29:17.077 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:34:17.093 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:35:17.096 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:37:17.101 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:40:47.116 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:42:17.124 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:43:47.129 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:44:47.134 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:48:47.148 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:50:44.898 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-26 07:52:17.162 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:53:47.166 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:57:17.179 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 07:58:47.182 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:01:47.190 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:04:17.197 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:06:17.201 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:11:47.221 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:14:17.231 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:15:17.234 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:16:47.240 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:18:47.246 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:21:47.254 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:22:47.257 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:23:47.261 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:28:47.275 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:30:47.282 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:31:47.285 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:32:47.289 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:34:47.294 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:36:47.301 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:37:47.304 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:43:17.321 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:47:47.333 WARNING (SyncWorker_11) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:48:47.335 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:50:17.341 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:50:44.899 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
-2023-05-26 08:52:17.355 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:55:17.354 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:56:17.357 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:56:27.497 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/aiohttp/web_protocol.py", line 332, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp/_http_parser.pyx", line 551, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: 400, message="Bad status line 'Invalid method encountered'"
-2023-05-26 08:57:17.359 WARNING (SyncWorker_12) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 08:58:47.360 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:00:17.370 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:01:47.375 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:07:17.397 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:09:17.403 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:10:17.405 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:14:47.421 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:15:47.425 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:21:17.444 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:23:22.790 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
-2023-05-26 09:23:23.267 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ (states('sensor.speedtest_cli_data') | from_json).ping | round(2) }}) renders=36>' for attribute '_attr_native_value' in entity 'sensor.speedtest_cli_ping'
-2023-05-26 09:23:23.425 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states('sensor.speedtest_cli_data') | from_json).download * 8 / 1000 / 1000) | round(2) }}) renders=36>' for attribute '_attr_native_value' in entity 'sensor.speedtest_cli_download'
-2023-05-26 09:23:23.507 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states('sensor.speedtest_cli_data') | from_json).upload * 8 / 1000 / 1000) | round(2) }}) renders=36>' for attribute '_attr_native_value' in entity 'sensor.speedtest_cli_upload'
-2023-05-26 09:23:23.564 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).isp) }}) renders=36>' for attribute '_attr_native_value' in entity 'sensor.speedtest_isp'
-2023-05-26 09:23:23.605 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).server_name) }}) renders=36>' for attribute '_attr_native_value' in entity 'sensor.speedtest_server_name'
-2023-05-26 09:23:23.685 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).server_host) }}) renders=36>' for attribute '_attr_native_value' in entity 'sensor.speedtest_server_host'
-2023-05-26 09:23:23.714 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).country) }}) renders=36>' for attribute '_attr_native_value' in entity 'sensor.speedtest_country'
-2023-05-26 09:23:23.728 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).id) }}) renders=36>' for attribute '_attr_native_value' in entity 'sensor.speedtest_id'
-2023-05-26 09:23:23.774 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).location) }}) renders=36>' for attribute '_attr_native_value' in entity 'sensor.speedtest_location'
-2023-05-26 09:23:24.891 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ (states('sensor.speedtest_cli_data') | from_json).ping | round(2) }}) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
-    return template.render(**kwargs)
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2034, in from_json
-    return json_loads(value)
-orjson.JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
-    render_info._result = self.async_render(variables, strict=strict, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-2023-05-26 09:23:24.933 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ (states('sensor.speedtest_cli_data') | from_json).ping | round(2) }}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.speedtest_cli_ping'
-2023-05-26 09:23:24.968 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ ((states('sensor.speedtest_cli_data') | from_json).download * 8 / 1000 / 1000) | round(2) }}) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
-    return template.render(**kwargs)
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2034, in from_json
-    return json_loads(value)
-orjson.JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
-    render_info._result = self.async_render(variables, strict=strict, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-2023-05-26 09:23:24.992 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states('sensor.speedtest_cli_data') | from_json).download * 8 / 1000 / 1000) | round(2) }}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.speedtest_cli_download'
-2023-05-26 09:23:25.264 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ ((states('sensor.speedtest_cli_data') | from_json).upload * 8 / 1000 / 1000) | round(2) }}) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
-    return template.render(**kwargs)
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2034, in from_json
-    return json_loads(value)
-orjson.JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
-    render_info._result = self.async_render(variables, strict=strict, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-2023-05-26 09:23:25.289 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states('sensor.speedtest_cli_data') | from_json).upload * 8 / 1000 / 1000) | round(2) }}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.speedtest_cli_upload'
-2023-05-26 09:23:25.319 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).isp) }}) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
-    return template.render(**kwargs)
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2034, in from_json
-    return json_loads(value)
-orjson.JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
-    render_info._result = self.async_render(variables, strict=strict, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-2023-05-26 09:23:25.339 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).isp) }}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.speedtest_isp'
-2023-05-26 09:23:25.367 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).server_name) }}) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
-    return template.render(**kwargs)
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2034, in from_json
-    return json_loads(value)
-orjson.JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
-    render_info._result = self.async_render(variables, strict=strict, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-2023-05-26 09:23:25.396 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).server_name) }}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.speedtest_server_name'
-2023-05-26 09:23:25.416 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).server_host) }}) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
-    return template.render(**kwargs)
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2034, in from_json
-    return json_loads(value)
-orjson.JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
-    render_info._result = self.async_render(variables, strict=strict, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-2023-05-26 09:23:25.490 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).server_host) }}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.speedtest_server_host'
-2023-05-26 09:23:25.525 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).country) }}) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
-    return template.render(**kwargs)
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2034, in from_json
-    return json_loads(value)
-orjson.JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
-    render_info._result = self.async_render(variables, strict=strict, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-2023-05-26 09:23:25.553 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).country) }}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.speedtest_country'
-2023-05-26 09:23:25.583 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).id) }}) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
-    return template.render(**kwargs)
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2034, in from_json
-    return json_loads(value)
-orjson.JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
-    render_info._result = self.async_render(variables, strict=strict, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-2023-05-26 09:23:25.600 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).id) }}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.speedtest_id'
-2023-05-26 09:23:25.627 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).location) }}) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 544, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2164, in _render_with_context
-    return template.render(**kwargs)
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2034, in from_json
-    return json_loads(value)
-orjson.JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 665, in async_render_to_info
-    render_info._result = self.async_render(variables, strict=strict, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 546, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: JSONDecodeError: unexpected character: line 1 column 1 (char 0)
-2023-05-26 09:23:25.643 ERROR (MainThread) [homeassistant.helpers.template_entity] TemplateError('JSONDecodeError: unexpected character: line 1 column 1 (char 0)') while processing template 'Template<template=({{ ((states("sensor.speedtest_cli_data") | from_json).location) }}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.speedtest_location'
-2023-05-26 09:23:34.083 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform command_line is taking over 10 seconds.
-2023-05-26 09:25:47.969 ERROR (MainThread) [homeassistant.components.shell_command] Error running command: `/bin/bash ha_gitpush.sh`, return code: 128
-NoneType: None
-2023-05-26 09:26:52.758 ERROR (MainThread) [homeassistant.components.shell_command] Error running command: `/bin/bash ha_gitpush.sh`, return code: 128
-NoneType: None
-2023-05-26 09:28:22.736 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:32:02.323 WARNING (MainThread) [homeassistant.config_entries] Config entry 'LG webOS TV 214E' for homekit_controller integration not ready yet: Timeout while waiting for connection to device 192.168.1.113:38297; Retrying in background
+2023-05-26 09:32:30.100 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.android_tv_192_168_1_115 is taking over 10 seconds
+2023-05-26 09:32:30.113 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.victor is taking over 10 seconds
+2023-05-26 09:32:30.402 ERROR (MainThread) [homeassistant.components.mobile_app.notify] Timeout sending notification to https://mobile-apps.home-assistant.io/api/sendPush/android/v1
+2023-05-26 09:32:30.492 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:10
+2023-05-26 09:32:30.500 WARNING (MainThread) [homeassistant.components.camera] Updating xiaomi_cloud_map_extractor camera took longer than the scheduled update interval 0:00:10
+2023-05-26 09:34:00.144 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:35:00.150 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:38:30.190 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:39:30.199 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:40:30.187 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:48:30.225 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:50:00.220 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:52:00.227 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:53:30.235 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:55:30.243 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:57:30.252 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 09:59:30.258 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:00:30.278 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:02:00.268 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:04:30.287 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:07:30.289 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:10:00.298 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:12:00.305 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:13:30.310 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:19:00.329 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:23:00.345 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:24:30.350 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:26:30.354 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:27:30.357 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:30:30.367 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:31:30.373 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:31:37.178 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
+2023-05-26 10:35:00.380 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:37:30.387 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:39:30.390 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:40:30.395 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:42:30.399 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:44:30.403 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:46:30.406 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:53:30.422 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:55:30.437 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 10:57:30.441 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:01:30.450 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:03:00.454 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:05:30.462 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:07:30.466 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:12:30.479 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:14:30.495 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:15:30.485 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:16:30.490 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:20:30.498 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:24:30.507 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:26:30.512 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:28:00.522 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:31:30.549 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:31:37.179 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
+2023-05-26 11:33:30.527 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:38:30.538 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:39:30.538 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:42:00.550 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:47:30.579 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:49:00.583 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:53:00.594 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:55:00.599 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:56:00.600 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:58:00.606 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 11:59:30.609 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:05:30.625 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:07:00.628 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:08:30.634 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:09:30.635 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:10:30.639 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:12:00.642 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:13:30.646 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:14:30.649 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:15:30.651 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:17:30.657 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:20:00.672 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:22:00.668 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:23:30.674 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:26:00.680 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:29:00.689 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:30:00.691 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:31:30.699 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:31:37.179 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
+2023-05-26 12:32:30.700 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:34:30.705 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:41:00.719 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:45:00.731 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:48:00.739 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:51:00.748 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:53:00.753 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:57:00.764 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 12:59:30.771 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:00:30.774 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:01:30.776 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:03:30.782 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:11:00.803 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:14:00.811 WARNING (SyncWorker_6) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:16:30.819 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:18:30.823 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:20:30.829 WARNING (SyncWorker_10) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:22:30.834 WARNING (SyncWorker_9) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:24:30.841 WARNING (SyncWorker_8) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:27:30.850 WARNING (SyncWorker_3) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:28:30.852 WARNING (SyncWorker_4) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:31:37.180 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_cli_data is taking over 10 seconds
+2023-05-26 13:33:30.868 WARNING (SyncWorker_0) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:35:00.871 WARNING (SyncWorker_7) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:38:30.879 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:39:30.880 WARNING (SyncWorker_5) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:41:30.886 WARNING (SyncWorker_1) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
+2023-05-26 13:51:30.911 WARNING (SyncWorker_2) [homeassistant.components.rpi_power.binary_sensor] Under-voltage was detected. Consider getting a uninterruptible power supply for your Raspberry Pi.
