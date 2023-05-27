@@ -260,3 +260,10 @@ aspirateur_selection_zones:
       minutes: 0
       seconds: 5
       milliseconds: 0
+s_github_push:
+  alias: Github Push
+  sequence:
+  - service: shell_command.pushconfiguration_github
+    data: {}
+  mode: single
+  icon: mdi:github
