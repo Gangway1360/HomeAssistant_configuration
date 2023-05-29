@@ -6,6 +6,8 @@ http:
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
 
+#Connexion utilisateurs bypass login
+
 # Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
@@ -25,3 +27,5 @@ panel_custom: !include panel.yaml
 #Pour executer de push Github depuis HA
 shell_command:
   pushconfiguration_github: /bin/bash /config/ha_gitpush.sh
+
+

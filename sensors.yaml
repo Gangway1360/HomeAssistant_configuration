@@ -59,3 +59,10 @@
       - type: processor_use
       - type: processor_temperature
       - type: last_boot
+      
+#Github integration
+  - platform: github
+    access_token: !secret Github_token
+    repositories:
+      - path: 'Gangway1360/HomeAssistant_configuration'
+        name: Friday Home Assistant Config
