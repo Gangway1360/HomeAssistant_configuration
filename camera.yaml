@@ -10,7 +10,7 @@
     attributes:
       - calibration_points
     scan_interval:
-      seconds: 10
+      seconds: 60
     auto_update: true
     store_map_raw: false
     store_map_image: true
