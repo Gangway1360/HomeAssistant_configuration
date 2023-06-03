@@ -6,7 +6,7 @@
         "motion_sensitivity": "medium",
         "trigger_indicator": false,
         "occupancy": false,
-        "illuminance": 127,
+        "illuminance": 54,
         "linkquality": 255,
         "device_temperature": 27,
         "power_outage_count": 0
