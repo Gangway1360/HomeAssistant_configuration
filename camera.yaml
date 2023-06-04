@@ -8,10 +8,33 @@
     country: "de"
     draw: ['all']
     attributes:
+      - charger
+      - cleaned_rooms
+      - goto_path
+      - goto_predicted_path
+      - path
       - calibration_points
+      - rooms
+      - walls
+      - zones
+    #temps entre chaque scan de la carte
     scan_interval:
-      seconds: 60
+      seconds: 43200
     auto_update: true
     store_map_raw: false
     store_map_image: true
     force_api: xiaomi
+    map_transformation:
+    #Positionnnement de la carte, zoom
+        trim:
+            top: 17
+            bottom: 20
+            left: 20
+            right: 15
+    room_colors:
+      1: [255, 0, 0]
+      2: [255, 128, 0]
+      3: [255, 255, 0]
+      4: [0, 255, 0]
+      5: [0, 64, 255]
+      6: [96, 36, 255]
