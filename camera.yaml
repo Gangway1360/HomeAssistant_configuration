@@ -10,17 +10,27 @@
     attributes:
       - charger
       - cleaned_rooms
+      - goto
       - goto_path
       - goto_predicted_path
       - path
       - calibration_points
+      - is_empty
+      - map_name
       - rooms
+      - room_numbers
+      - no_go_areas
+      - no_mopping_areas
       - walls
+      - path
+      - vacuum_position
+      - vacuum_room
+      - vacuum_room_name
       - zones
     #temps entre chaque scan de la carte
     scan_interval:
-      seconds: 43200
-    auto_update: true
+      seconds: 60
+    auto_update: false
     store_map_raw: false
     store_map_image: true
     force_api: xiaomi
@@ -31,10 +41,23 @@
             bottom: 20
             left: 20
             right: 15
+    colors:
+      color_map_outside: [28, 28, 28]
+      color_map_wall_v2: [93, 109, 126]
+      color_path: [147, 194, 238]
+      color_zones: [0xAD, 0xD8, 0xFF, 0x8F]
+      color_zones_outline: [0xAD, 0xD8, 0xFF]
+      color_virtual_walls: [255, 0, 0]
+      color_no_go_zones: [255, 33, 55, 127]
+      color_no_go_zones_outline: [255, 0, 0]
+      color_charger: [0x66, 0xfe, 0xda, 0x7f]
+      color_robo: [75, 235, 149]
+      color_scan: [28, 28, 28]
     room_colors:
-      1: [255, 0, 0]
-      2: [255, 128, 0]
-      3: [255, 255, 0]
-      4: [0, 255, 0]
-      5: [0, 64, 255]
-      6: [96, 36, 255]
+      16: [85, 98, 112]
+      17: [78, 205, 196]
+      18: [199, 244, 100]
+      19: [255, 107, 107]
+      20: [196, 77, 88]
+      21: [168, 230, 206]  
+      22: [148, 140, 117]
