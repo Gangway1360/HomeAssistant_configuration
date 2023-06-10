@@ -456,3 +456,12 @@
     message: Batterie thermostat inf à 50%
     title: Batterie alerte
   mode: single
+- id: '1686345345804'
+  alias: Update Map Extractor camera
+  description: ''
+  use_blueprint:
+    path: PiotrMachowski/update_map_extractor.yaml
+    input:
+      vacuum: vacuum.victor
+      camera: camera.victor
+      mode_to_handle: two_intervals

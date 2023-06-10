@@ -267,3 +267,27 @@ s_github_push:
     data: {}
   mode: single
   icon: mdi:github
+s_aspirateur_cuisine:
+  alias: 'S_Aspirateur: Cuisine'
+  sequence:
+  - service: xiaomi_miio.vacuum_clean_zone
+    target:
+      entity_id: vacuum.victor
+    data:
+      repeats: 1
+      zone:
+      - - 29526
+        - 28827
+        - 36825
+        - 33689
+  mode: single
+  icon: mdi:robot-vacuum
+s_aspirateur_poubelle:
+  alias: 'S_Aspirateur: Poubelle'
+  sequence:
+  - service: xiaomi_miio.vacuum_goto
+    data:
+      x_coord: '30250'
+      y_coord: '29500'
+  mode: single
+  icon: mdi:robot-vacuum
