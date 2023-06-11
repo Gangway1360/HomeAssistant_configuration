@@ -276,10 +276,10 @@ s_aspirateur_cuisine:
     data:
       repeats: 1
       zone:
-      - - 29526
-        - 28827
-        - 36825
-        - 33689
+      - - 29609
+        - 28728
+        - 31793
+        - 33527
   mode: single
   icon: mdi:robot-vacuum
 s_aspirateur_poubelle:
@@ -291,3 +291,26 @@ s_aspirateur_poubelle:
       y_coord: '29500'
   mode: single
   icon: mdi:robot-vacuum
+'1686493801254':
+  alias: Status aspirateur
+  sequence:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: sensor.roborock_vacuum_a08_last_clean_start
+        state: ''
+      sequence:
+      - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+        domain: mobile_app
+        type: notify
+        message: 'Aspirateur en cours '
+    - conditions:
+      - condition: state
+        entity_id: sensor.roborock_vacuum_a08_last_clean_end
+        state: ''
+      sequence:
+      - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+        domain: mobile_app
+        type: notify
+        message: Fin aspirateur
+  mode: single

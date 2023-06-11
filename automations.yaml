@@ -464,4 +464,25 @@
     input:
       vacuum: vacuum.victor
       camera: camera.victor
-      mode_to_handle: two_intervals
+      mode_to_handle: browser_mod_path
+      update_once_after_docking: false
+      interval_cleaning: 60
+- id: '1686472336216'
+  alias: Notification - Aspirateur en cours
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.roborock_vacuum_a08_last_clean_start
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 3
+  condition: []
+  action:
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    message: Nettoyage en cours
+    title: Aspirateur Victor
+  mode: single
