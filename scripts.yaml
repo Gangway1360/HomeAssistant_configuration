@@ -289,6 +289,8 @@ s_aspirateur_poubelle:
     data:
       x_coord: '30250'
       y_coord: '29500'
+    target:
+      device_id: 69a79426f94df904e5a6481eae64be2c
   mode: single
   icon: mdi:robot-vacuum
 '1686493801254':
@@ -297,20 +299,25 @@ s_aspirateur_poubelle:
   - choose:
     - conditions:
       - condition: state
-        entity_id: sensor.roborock_vacuum_a08_last_clean_start
-        state: ''
+        entity_id: vacuum.victor
+        attribute: status
+        state: cleaning
       sequence:
       - device_id: 2b61395c28cf69b6694f9a88c35a9df6
         domain: mobile_app
         type: notify
         message: 'Aspirateur en cours '
+        title: 'Etat: Aspirateur'
     - conditions:
       - condition: state
-        entity_id: sensor.roborock_vacuum_a08_last_clean_end
-        state: ''
+        entity_id: vacuum.victor
+        attribute: status
+        state: idle
       sequence:
       - device_id: 2b61395c28cf69b6694f9a88c35a9df6
         domain: mobile_app
         type: notify
-        message: Fin aspirateur
+        message: Aspirateur finis
+        title: 'Etat: Aspirateur'
   mode: single
+  icon: mdi:robot-vacuum

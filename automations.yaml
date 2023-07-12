@@ -464,7 +464,7 @@
     input:
       vacuum: vacuum.victor
       camera: camera.victor
-      mode_to_handle: browser_mod_path
+      mode_to_handle: two_intervals
       update_once_after_docking: false
       interval_cleaning: 60
 - id: '1686472336216'
@@ -485,4 +485,67 @@
     type: notify
     message: Nettoyage en cours
     title: Aspirateur Victor
+  mode: single
+- id: '1687869622868'
+  alias: 'Zone Susana '
+  description: 'Hors montesquieu '
+  trigger:
+  - platform: zone
+    entity_id: person.susana
+    zone: zone.rousillon
+    event: enter
+  condition: []
+  action:
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    title: Zone Susana
+    message: 'Susana n''est plus à Montesquieu '
+  mode: single
+- id: '1688968286371'
+  alias: Entrée appartement
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+    entity_id: 0c78b683591cc333c864ed0091881b23
+    domain: binary_sensor
+    alias: 'Mouvement entrée détecté '
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
+    entity_id: a84e34fa2fb56e6c4ecd3ae1f3d99ca8
+    domain: sensor
+    below: 65
+    alias: Luminosité basse
+  - condition: or
+    conditions:
+    - condition: device
+      type: is_off
+      device_id: 687dad33e6d70811a28a821055adccd4
+      entity_id: 5ef39c9d6d725a3e4c9729af5b0e083e
+      domain: light
+    - condition: device
+      type: is_off
+      device_id: 56937e4fc50a2019406b0874255917cd
+      entity_id: a0fea540b0b26aa81c0415f441cd6b34
+      domain: light
+    alias: Autre lumières OFF
+  - condition: device
+    device_id: cccadbb1f56557877997f87d8d3b291c
+    domain: media_player
+    entity_id: 33b7f6c057d0f2f130f7d027c27d0701
+    type: is_off
+    alias: TV eteinte
+  - condition: state
+    entity_id: device_tracker.nmap_tracker_d2_a0_73_ba_c7_3d
+    attribute: reason
+    state: Arp_response
+  action:
+  - type: turn_on
+    device_id: 687dad33e6d70811a28a821055adccd4
+    entity_id: 5ef39c9d6d725a3e4c9729af5b0e083e
+    domain: light
   mode: single
