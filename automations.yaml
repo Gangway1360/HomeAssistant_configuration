@@ -549,3 +549,62 @@
     entity_id: 5ef39c9d6d725a3e4c9729af5b0e083e
     domain: light
   mode: single
+- id: '1691692202938'
+  alias: 'Où est le portefeuille ? '
+  description: 'est-ce-que toujours connecté au Portefeuille ? '
+  trigger:
+  - platform: state
+    entity_id:
+    - device_tracker.portefeuille
+    attribute: is_lost
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: device_tracker.portefeuille
+        for:
+          hours: 0
+          minutes: 0
+          seconds: 0
+        attribute: is_lost
+        state: 'false'
+      sequence:
+      - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+        domain: mobile_app
+        type: notify
+        message: 'Tile: Portefeuille'
+        title: "Connecté \U0001F44D"
+    - conditions:
+      - condition: state
+        entity_id: device_tracker.portefeuille
+        attribute: is_lost
+        for:
+          hours: 0
+          minutes: 0
+          seconds: 0
+        state: 'true'
+      sequence:
+      - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+        domain: mobile_app
+        type: notify
+        message: 'Tile: Portefeuille'
+        title: "Déconnecté \U0001F44E"
+    enabled: false
+  - if:
+    - condition: state
+      entity_id: device_tracker.portefeuille
+      attribute: is_lost
+      state: ''
+    then:
+    - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+      domain: mobile_app
+      type: notify
+      message: 'Tile: Portefeuille'
+      title: Gps
+    enabled: false
+  - condition: state
+    entity_id: device_tracker.portefeuille
+    attribute: is_lost
+    state: ''
+  mode: single
