@@ -133,47 +133,34 @@
       entity_id: light.yeelight_color_lampadaire
       domain: light
   action:
-  - type: turn_off
-    device_id: 687dad33e6d70811a28a821055adccd4
-    entity_id: light.yeelight_color_entree
-    domain: light
-  - type: turn_off
-    device_id: 56937e4fc50a2019406b0874255917cd
-    entity_id: light.yeelight_color_lampadaire
-    domain: light
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: 687dad33e6d70811a28a821055adccd4
+        entity_id: light.yeelight_color_entree
+        domain: light
+      sequence:
+      - type: turn_off
+        device_id: 687dad33e6d70811a28a821055adccd4
+        entity_id: light.yeelight_color_entree
+        domain: light
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: 56937e4fc50a2019406b0874255917cd
+        entity_id: light.yeelight_color_lampadaire
+        domain: light
+      sequence:
+      - type: turn_off
+        device_id: 56937e4fc50a2019406b0874255917cd
+        entity_id: light.yeelight_color_lampadaire
+        domain: light
   - device_id: 2b61395c28cf69b6694f9a88c35a9df6
     domain: mobile_app
     type: notify
     title: Automatisation
-    message: Lumières Off. Assez lumineux
-  mode: single
-- id: '1674058676939'
-  alias: Salon_TV-entree_OFF
-  description: ''
-  trigger:
-  - platform: device
-    type: changed_states
-    device_id: cccadbb1f56557877997f87d8d3b291c
-    entity_id: media_player.android_tv_192_168_1_115
-    domain: media_player
-  condition:
-  - condition: and
-    conditions:
-    - condition: device
-      type: is_on
-      device_id: 687dad33e6d70811a28a821055adccd4
-      entity_id: light.yeelight_color_entree
-      domain: light
-    - condition: device
-      device_id: cccadbb1f56557877997f87d8d3b291c
-      domain: media_player
-      entity_id: media_player.android_tv_192_168_1_115
-      type: is_playing
-  action:
-  - type: turn_off
-    device_id: 687dad33e6d70811a28a821055adccd4
-    entity_id: light.yeelight_color_entree
-    domain: light
+    message: Lumières salon Off. Assez lumineux
   mode: single
 - id: '1674119803862'
   alias: Salon_TV-lux_Ambilight_OFF
@@ -282,6 +269,10 @@
     device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
     entity_id: binary_sensor.0x54ef4410005a8dc9_occupancy
     domain: binary_sensor
+    enabled: false
+  - platform: state
+    entity_id:
+    - sensor.super21_next_alarm
   condition:
   - condition: and
     conditions:
@@ -295,20 +286,26 @@
       - sat
       - fri
       - sun
+      before: '10:00:00'
     - type: is_illuminance
       condition: device
       device_id: 6d37dbde4b1751a27b3e7b8c1791fdc9
       entity_id: sensor.0x54ef4410005a8dc9_illuminance_lux
       domain: sensor
       below: 60
+      enabled: true
     - condition: numeric_state
       entity_id: counter.detection_mouvement
       below: 1
+      enabled: false
     - type: is_not_plugged_in
       condition: device
       device_id: 2b61395c28cf69b6694f9a88c35a9df6
       entity_id: binary_sensor.super21_is_charging
       domain: binary_sensor
+    - condition: zone
+      entity_id: device_tracker.super21
+      zone: zone.home
     enabled: true
   action:
   - service: script.compteur_mouvement
@@ -355,31 +352,6 @@
     target:
       entity_id: counter.detection_mouvement
   mode: single
-- id: '1675435936823'
-  alias: Update notifications
-  description: ''
-  use_blueprint:
-    path: mdegat01/update_notifications.yaml
-    input:
-      reminder_hours: '3'
-      update_entities:
-      - update.0x54ef4410005a8dc9
-      - update.duck_dns_update
-      - update.file_editor_update
-      - update.home_assistant_core_update
-      - update.home_assistant_operating_system_update
-      - update.home_assistant_supervisor_update
-      - update.hacs_update
-      - update.hyperhdr_update
-      - update.let_s_encrypt_update
-      - update.mosquitto_broker_update
-      - update.my_ecowatt_by_rte_update
-      - update.nextcloud_backup_update
-      - update.samba_share_update
-      - update.ssh_web_terminal_update
-      - update.zigbee2mqtt_update
-      - update.xiaomi_cloud_map_extractor_update
-      mobile_app_device: 2b61395c28cf69b6694f9a88c35a9df6
 - id: '1677834702352'
   alias: Rentre à la maison
   description: ''
@@ -399,9 +371,9 @@
       entity_id: binary_sensor.0x54ef4410005a8dc9_occupancy
       domain: binary_sensor
     - condition: device
-      device_id: cccadbb1f56557877997f87d8d3b291c
+      device_id: 84fe21f5b69ce4084ad41680653fb36c
       domain: media_player
-      entity_id: media_player.android_tv_192_168_1_115
+      entity_id: 78c6213d6cb12c241f6e7bab78850646
       type: is_off
     - type: is_illuminance
       condition: device
@@ -466,7 +438,8 @@
       camera: camera.victor
       mode_to_handle: two_intervals
       update_once_after_docking: false
-      interval_cleaning: 60
+      interval_cleaning: 300
+      interval_docked: 10000
 - id: '1686472336216'
   alias: Notification - Aspirateur en cours
   description: ''
@@ -488,11 +461,11 @@
   mode: single
 - id: '1687869622868'
   alias: 'Zone Susana '
-  description: 'Hors montesquieu '
+  description: 'Hors Triboulet '
   trigger:
   - platform: zone
     entity_id: person.susana
-    zone: zone.rousillon
+    zone: zone.triboulet
     event: enter
   condition: []
   action:
@@ -500,7 +473,7 @@
     domain: mobile_app
     type: notify
     title: Zone Susana
-    message: 'Susana n''est plus à Montesquieu '
+    message: 'Susana n''est plus à Triboulet '
   mode: single
 - id: '1688968286371'
   alias: Entrée appartement
@@ -520,7 +493,7 @@
     domain: sensor
     below: 65
     alias: Luminosité basse
-  - condition: or
+  - condition: and
     conditions:
     - condition: device
       type: is_off
@@ -532,79 +505,142 @@
       device_id: 56937e4fc50a2019406b0874255917cd
       entity_id: a0fea540b0b26aa81c0415f441cd6b34
       domain: light
-    alias: Autre lumières OFF
-  - condition: device
-    device_id: cccadbb1f56557877997f87d8d3b291c
-    domain: media_player
-    entity_id: 33b7f6c057d0f2f130f7d027c27d0701
-    type: is_off
-    alias: TV eteinte
   - condition: state
     entity_id: device_tracker.nmap_tracker_d2_a0_73_ba_c7_3d
     attribute: reason
-    state: Arp_response
+    state: arp-response
   action:
   - type: turn_on
     device_id: 687dad33e6d70811a28a821055adccd4
     entity_id: 5ef39c9d6d725a3e4c9729af5b0e083e
     domain: light
   mode: single
-- id: '1691692202938'
-  alias: 'Où est le portefeuille ? '
-  description: 'est-ce-que toujours connecté au Portefeuille ? '
+- id: '1694499595267'
+  alias: Alerte pluie
+  description: ''
   trigger:
   - platform: state
     entity_id:
-    - device_tracker.portefeuille
-    attribute: is_lost
+    - sensor.lyon_rain_chance
+    from: '50'
+  condition:
+  - condition: time
+    weekday:
+    - tue
+    - wed
+  action:
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    message: Pluie
+    title: Prends le parapluie
+  mode: single
+- id: '1697124381455'
+  alias: Susana Annonay
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: device_tracker.iphone_marvel
+    zone: zone.annonay
+    event: leave
   condition: []
   action:
-  - choose:
-    - conditions:
-      - condition: state
-        entity_id: device_tracker.portefeuille
-        for:
-          hours: 0
-          minutes: 0
-          seconds: 0
-        attribute: is_lost
-        state: 'false'
-      sequence:
-      - device_id: 2b61395c28cf69b6694f9a88c35a9df6
-        domain: mobile_app
-        type: notify
-        message: 'Tile: Portefeuille'
-        title: "Connecté \U0001F44D"
-    - conditions:
-      - condition: state
-        entity_id: device_tracker.portefeuille
-        attribute: is_lost
-        for:
-          hours: 0
-          minutes: 0
-          seconds: 0
-        state: 'true'
-      sequence:
-      - device_id: 2b61395c28cf69b6694f9a88c35a9df6
-        domain: mobile_app
-        type: notify
-        message: 'Tile: Portefeuille'
-        title: "Déconnecté \U0001F44E"
-    enabled: false
-  - if:
-    - condition: state
-      entity_id: device_tracker.portefeuille
-      attribute: is_lost
-      state: ''
-    then:
-    - device_id: 2b61395c28cf69b6694f9a88c35a9df6
-      domain: mobile_app
-      type: notify
-      message: 'Tile: Portefeuille'
-      title: Gps
-    enabled: false
-  - condition: state
-    entity_id: device_tracker.portefeuille
-    attribute: is_lost
-    state: ''
+  - device_id: 2b61395c28cf69b6694f9a88c35a9df6
+    domain: mobile_app
+    type: notify
+    message: 'Quitte Annonay '
+    title: Susana
+  mode: single
+- id: '1699783167997'
+  alias: Ios_Cuisine
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Light_cuisine
+  condition: []
+  action:
+  - service: automation.trigger
+    data:
+      skip_condition: true
+    target:
+      entity_id: automation.interrupteur_cuisine
+  mode: single
+- id: '1699783827693'
+  alias: Interrupteur cuisine
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.toggle_cuisine
+    alias: Quand interrupteur cuisine
+  condition: []
+  action:
+  - service: light.toggle
+    data: {}
+    target:
+      entity_id: light.g_cuisine
+  mode: single
+- id: '1699784746258'
+  alias: Interrupteur entrée
+  description: ''
+  trigger:
+  - alias: Quand interrupteur entrée
+    platform: state
+    entity_id:
+    - input_button.toggle_entree
+  condition: []
+  action:
+  - service: light.toggle
+    data: {}
+    target:
+      entity_id: light.yeelight_color_entree
+  mode: single
+- id: '1699784822278'
+  alias: IOS_entrée
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Light_entree
+  condition: []
+  action:
+  - service: automation.trigger
+    data:
+      skip_condition: true
+    target:
+      entity_id: automation.interrupteur_entree
+  mode: single
+- id: '1699784910050'
+  alias: Interrupteur lampadaire
+  description: ''
+  trigger:
+  - alias: Quand interrupteur lampadaire
+    platform: state
+    entity_id:
+    - input_button.toggle_lampadaire
+  condition: []
+  action:
+  - service: light.toggle
+    data: {}
+    target:
+      entity_id: light.yeelight_color_lampadaire
+  mode: single
+- id: '1699785081385'
+  alias: Ios_lampadaire
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Light_lampadaire
+  condition: []
+  action:
+  - service: automation.trigger
+    data:
+      skip_condition: true
+    target:
+      entity_id: automation.interrupteur_lampadaire
   mode: single

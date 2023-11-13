@@ -97,10 +97,10 @@ s_aspirateur_litiere:
     data:
       repeats: 1
       zone:
-      - - 31854
-        - 31598
-        - 35190
-        - 33738
+      - - 33859
+        - 31266
+        - 36891
+        - 33700
   mode: single
   icon: mdi:robot-vacuum
 s_aspirateur_tapis:
@@ -112,10 +112,10 @@ s_aspirateur_tapis:
     data:
       repeats: 1
       zone:
-      - - 33182
-        - 28894
-        - 36045
-        - 31122
+      - - 33580
+        - 29687
+        - 35874
+        - 30763
   mode: single
   icon: mdi:robot-vacuum
 compteur_mouvement:

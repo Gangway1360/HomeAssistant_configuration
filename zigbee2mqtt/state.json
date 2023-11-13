@@ -1,14 +1,14 @@
 {
     "0x54ef4410005a8dc9": {
-        "voltage": 3039,
+        "voltage": 3023,
         "battery": 100,
         "detection_interval": 30,
         "motion_sensitivity": "medium",
         "trigger_indicator": false,
         "occupancy": false,
-        "illuminance": 59,
+        "illuminance": 72,
         "linkquality": 255,
-        "device_temperature": 30,
+        "device_temperature": 23,
         "power_outage_count": 0
     }
 }
